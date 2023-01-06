@@ -48,6 +48,11 @@ $lang['menu_ubah_password'] 					= 'Change Password';
 $lang['menu_ubah_profile'] 						= 'Change Profile';
 $lang['menu_log'] 								= 'History';
 $lang['menu_brand'] 							= 'Brand';
+$lang['menu_official_brand'] 					= 'Official Brand';
+$lang['menu_category'] 							= 'Category';
+$lang['menu_subcategory'] 						= 'Subcategory';
+$lang['menu_product'] 							= 'Product';
+$lang['menu_articles'] 							= 'Articles';
 
 
 
