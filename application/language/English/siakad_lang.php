@@ -47,6 +47,11 @@ $lang['menu_waktu'] 							= 'Time';
 $lang['menu_ubah_password'] 					= 'Change Password';
 $lang['menu_ubah_profile'] 						= 'Change Profile';
 $lang['menu_log'] 								= 'History';
+$lang['menu_brand'] 							= 'Brand';
+
+
+
+
 $lang['title_add'] 								= 'Add';
 $lang['title_delete'] 							= 'Delete';
 $lang['title_cancel'] 							= 'Cancel';

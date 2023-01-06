@@ -47,6 +47,7 @@ $lang['menu_waktu'] 							= 'Waktu';
 $lang['menu_ubah_password'] 					= 'Ubah Kata Sandi';
 $lang['menu_ubah_profile'] 						= 'Ubah Profil';
 $lang['menu_log'] 								= 'Riwayat';
+$lang['menu_brand'] 							= 'Brand';
 $lang['title_add'] 								= 'Tambah';
 $lang['title_delete'] 							= 'Hapus';
 $lang['title_cancel'] 							= 'Batal';
