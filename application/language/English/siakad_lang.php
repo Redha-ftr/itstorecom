@@ -53,7 +53,7 @@ $lang['menu_category'] 							= 'Category';
 $lang['menu_subcategory'] 						= 'Subcategory';
 $lang['menu_product'] 							= 'Product';
 $lang['menu_articles'] 							= 'Articles';
-
+$lang['menu_social_media'] 						= 'Social Media';
 
 
 
