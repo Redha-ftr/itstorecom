@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Brand extends Base_Controller {
+class Official_brand extends Base_Controller {
 
 	/**
-     * List of Brands
+     * List of Official_brands
      *
      * @access 	public
      * @param 	
@@ -15,7 +15,7 @@ class Brand extends Base_Controller {
     {
         parent::__construct();
         
-		$this->load->model('brand_m');
+		$this->load->model('official_brand_m');
 		$this->load->language('siakad', $this->session->userdata('language'));
     }
 	
@@ -24,13 +24,13 @@ class Brand extends Base_Controller {
 	
 	public function index()
 	{
-		$this->data['title'] = $this->lang->line('menu_brand');
-		$this->data['subview'] = 'brand/main';
+		$this->data['title'] = $this->lang->line('menu_official_brand');
+		$this->data['subview'] = 'official_brand/main';
 		$this->load->view('components/main', $this->data);
 	}
 
 	/**
-     * Brand Form
+     * Official_brand Form
      *
      * @access 	public
      * @param 	
@@ -41,11 +41,11 @@ class Brand extends Base_Controller {
 	{
 		$this->load->model('group_m');
 
-		$data['title']			= $this->lang->line('menu_brand');
+		$data['title']			= $this->lang->line('menu_official_brand');
 		$data['groups'] 		= $this->group_m->all();
 		$data['index'] 			= $this->input->post('index');
 
-		$this->load->view('brand/form', $data);
+		$this->load->view('official_brand/form', $data);
 	}
 
 	/**
@@ -108,7 +108,7 @@ class Brand extends Base_Controller {
 	}
 
 	/**
-     * Create a New Brand
+     * Create a New Official_brand
      *
      * @access 	public
      * @param 	
@@ -144,7 +144,7 @@ class Brand extends Base_Controller {
 
 		//log data
 		$record_id  = $this->db->insert_id();
-		$log_akses 	= log_akses('Create','Tambah Brand');
+		$log_akses 	= log_akses('Create','Tambah Official brand');
 		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
 
 
@@ -153,7 +153,7 @@ class Brand extends Base_Controller {
 	}
 
 	/**
-     * Update Existing Brand
+     * Update Existing Official brand
      *
      * @access 	public
      * @param 	
@@ -189,7 +189,7 @@ class Brand extends Base_Controller {
 
 		//log data
 		$record_id  = $this->input->post('id');
-		$log_akses 	= log_akses('Update','Ubah Brand');
+		$log_akses 	= log_akses('Update','Ubah Official brand');
 		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
 
 
@@ -199,7 +199,7 @@ class Brand extends Base_Controller {
 	}
 
 	/**
-     * Delete a Brand
+     * Delete a Official_brand
      *
      * @access 	public
      * @param 	
@@ -220,7 +220,7 @@ class Brand extends Base_Controller {
 
 		//log data
 		$record_id  = $this->input->post('id');
-		$log_akses 	= log_akses('Delete','Hapus Brand');
+		$log_akses 	= log_akses('Delete','Hapus Official brand');
 		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
 
 		header('Content-Type: application/json');
