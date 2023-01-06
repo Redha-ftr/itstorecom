@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Category extends Base_Controller {
+class Subcategory extends Base_Controller {
 
 	/**
      * List of Sekolahs
@@ -15,7 +15,7 @@ class Category extends Base_Controller {
     {
         parent::__construct();
         
-		$this->load->model('category_m');
+		$this->load->model('subcategory_m');
 		$this->load->language('siakad', $this->session->userdata('language'));
     }
 	
@@ -24,8 +24,8 @@ class Category extends Base_Controller {
 	
 	public function index()
 	{
-		$this->data['title'] = $this->lang->line('menu_category');
-		$this->data['subview'] = 'category/main';
+		$this->data['title'] = $this->lang->line('menu_subcategory');
+		$this->data['subview'] = 'subcategory/main';
 		$this->load->view('components/main', $this->data);
 	}
 
@@ -41,11 +41,11 @@ class Category extends Base_Controller {
 	{
 		$this->load->model('group_m');
 
-		$data['title']			= $this->lang->line('menu_category');
+		$data['title']			= $this->lang->line('menu_subcategory');
 		$data['groups'] 		= $this->group_m->all();
 		$data['index'] 			= $this->input->post('index');
 
-		$this->load->view('category/form', $data);
+		$this->load->view('subcategory/form', $data);
 	}
 
 	/**
@@ -59,7 +59,7 @@ class Category extends Base_Controller {
 	public function data()
 	{
         header('Content-Type: application/json');
-		echo json_encode($this->category_m->getJson($this->input->post()));
+		echo json_encode($this->subcategory_m->getJson($this->input->post()));
 	}
 
 	/**
