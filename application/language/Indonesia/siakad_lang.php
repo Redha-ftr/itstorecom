@@ -53,7 +53,6 @@ $lang['menu_category'] 							= 'Kategori';
 $lang['menu_subcategory'] 						= 'Subkategori';
 $lang['menu_product'] 							= 'Produk';
 $lang['menu_articles'] 							= 'Artikel';
-$lang['menu_social_media'] 						= 'Media Sosial';
 $lang['title_add'] 								= 'Tambah';
 $lang['title_delete'] 							= 'Hapus';
 $lang['title_cancel'] 							= 'Batal';
