@@ -1,0 +1,58 @@
+.validation-message {
+	color: #d9534f;
+	margin-top: .50rem;
+}
+.hidden {
+	display: none
+}
+
+
+.foto_tampil{
+	width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 8px 0 0;
+    border-color: #D6C08A;
+    background: #fff;
+    border: 1px solid #ddd;
+	}
+
+	.foto_tampil img {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 8px 0 0;
+    border-color: #D6C08A;
+    background: #fff;
+}
+
+
+
+.box_filter{
+    background-color: #ffffff !important;
+}
+
+
+.box_filter .title{
+    font-weight: bold;
+}
+
+
+.w-80{
+    width: 86% !important;
+}
+
+#thead-title {
+    background-color: #fff;
+}
+
+
+.timetable_jadwal{
+    box-shadow: rgb(35 46 60 / 4%) 0 2px 4px 0; 
+    border: 1px solid rgba(101,109,119,.16); 
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f0e9d2;
+}
