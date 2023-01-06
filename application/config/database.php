@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
+	'hostname' => '192.168.100.55',
+	'username' => 'redha',
+	'password' => '11223344#*',
 	'database' => 'toko_komputer',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
