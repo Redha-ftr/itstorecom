@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Product extends Base_Controller {
 
 	/**
-     * List of Products
+     * List of Product
      *
      * @access 	public
      * @param 	
@@ -59,7 +59,7 @@ class Product extends Base_Controller {
 	public function data()
 	{
         header('Content-Type: application/json');
-		echo json_encode($this->sekolah_m->getJson($this->input->post()));
+		echo json_encode($this->product_m->getJson($this->input->post()));
 	}
 
 	/**
@@ -74,7 +74,7 @@ class Product extends Base_Controller {
 	{
 		$rules = [
 			[
-				'field' => 'nama_sekolah',
+				'field' => 'nama',
 				'label' => 'form',
 				'rules' => 'required'
 			]
@@ -144,7 +144,7 @@ class Product extends Base_Controller {
 
 		//log data
 		$record_id  = $this->db->insert_id();
-		$log_akses 	= log_akses('Create','Tambah Official brand');
+		$log_akses 	= log_akses('Create','Tambah Product');
 		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
 
 
@@ -153,7 +153,7 @@ class Product extends Base_Controller {
 	}
 
 	/**
-     * Update Existing Official brand
+     * Update Existing Product
      *
      * @access 	public
      * @param 	
@@ -189,7 +189,7 @@ class Product extends Base_Controller {
 
 		//log data
 		$record_id  = $this->input->post('id');
-		$log_akses 	= log_akses('Update','Ubah Official brand');
+		$log_akses 	= log_akses('Update','Ubah Product');
 		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
 
 
@@ -220,7 +220,7 @@ class Product extends Base_Controller {
 
 		//log data
 		$record_id  = $this->input->post('id');
-		$log_akses 	= log_akses('Delete','Hapus Official brand');
+		$log_akses 	= log_akses('Delete','Hapus Product');
 		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
 
 		header('Content-Type: application/json');
