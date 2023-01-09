@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Category extends Base_Controller {
 
 	/**
-     * List of Sekolahs
+     * List of Categorys
      *
      * @access 	public
      * @param 	
@@ -118,20 +118,7 @@ class Category extends Base_Controller {
 	public function create()
 	{
 		$data['nama_kategori']    	= $this->input->post('nama_kategori');
-		$data['nis_nss_dns']    	= $this->input->post('nis_nss_dns');
-		$data['npsn']    			= $this->input->post('npsn');
-		$data['alamat_kategori']    	= $this->input->post('alamat_kategori');
-		$data['kelurahan_desa']    	= $this->input->post('kelurahan_desa');
-		$data['kecamatan']   		= $this->input->post('kecamatan');
-		$data['kota_kabupaten']    	= $this->input->post('kota_kabupaten');
-		$data['provinsi']    		= $this->input->post('provinsi');
-		$data['website']   			= $this->input->post('website');
-		$data['email']    			= $this->input->post('email');
-		$data['telepon']    		= $this->input->post('telepon');
-		$data['visi']    			= $this->input->post('visi');
-		$data['misi']    			= $this->input->post('misi');
-		$data['logo']    			= $this->input->post('logo');
-		$data['logo_pemerintah']    = $this->input->post('logo_pemerintah');
+		$data['images']    			= $this->input->post('images');
 
 		//log
 		$data['users_created']   		= $this->session->userdata('active_user')->id;
@@ -144,7 +131,7 @@ class Category extends Base_Controller {
 
 		//log data
 		$record_id  = $this->db->insert_id();
-		$log_akses 	= log_akses('Create','Tambah Sekolah');
+		$log_akses 	= log_akses('Create','Tambah category');
 		$log_change = log_change($log_akses,'kategori', $record_id, $data);
 
 
@@ -153,7 +140,7 @@ class Category extends Base_Controller {
 	}
 
 	/**
-     * Update Existing Sekolah
+     * Update Existing category
      *
      * @access 	public
      * @param 	
@@ -163,20 +150,7 @@ class Category extends Base_Controller {
 	public function update()
 	{
 		$data['nama_kategori']    	= $this->input->post('nama_kategori');
-		$data['nis_nss_dns']    	= $this->input->post('nis_nss_dns');
-		$data['npsn']    			= $this->input->post('npsn');
-		$data['alamat_kategori']    	= $this->input->post('alamat_kategori');
-		$data['kelurahan_desa']    	= $this->input->post('kelurahan_desa');
-		$data['kecamatan']   		= $this->input->post('kecamatan');
-		$data['kota_kabupaten']    	= $this->input->post('kota_kabupaten');
-		$data['provinsi']    		= $this->input->post('provinsi');
-		$data['website']   			= $this->input->post('website');
-		$data['email']    			= $this->input->post('email');
-		$data['telepon']    		= $this->input->post('telepon');
-		$data['visi']    			= $this->input->post('visi');
-		$data['misi']    			= $this->input->post('misi');
-		$data['logo']    			= $this->input->post('logo');
-		$data['logo_pemerintah']    = $this->input->post('logo_pemerintah');
+		$data['images']    			= $this->input->post('images');
 
 		//log
 		$data['updated_at']   		= date('Y-m-d H:i:s');
@@ -189,7 +163,7 @@ class Category extends Base_Controller {
 
 		//log data
 		$record_id  = $this->input->post('id');
-		$log_akses 	= log_akses('Update','Ubah Sekolah');
+		$log_akses 	= log_akses('Update','Ubah category');
 		$log_change = log_change($log_akses,'kategori', $record_id, $data);
 
 
@@ -199,7 +173,7 @@ class Category extends Base_Controller {
 	}
 
 	/**
-     * Delete a Sekolah
+     * Delete a category
      *
      * @access 	public
      * @param 	
@@ -220,7 +194,7 @@ class Category extends Base_Controller {
 
 		//log data
 		$record_id  = $this->input->post('id');
-		$log_akses 	= log_akses('Delete','Hapus Sekolah');
+		$log_akses 	= log_akses('Delete','Hapus category');
 		$log_change = log_change($log_akses,'kategori', $record_id, $data);
 
 		header('Content-Type: application/json');
