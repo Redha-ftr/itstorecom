@@ -55,7 +55,7 @@ class Subcategory_m extends CI_Model {
 
 	public function getJson($input)
 	{
-		$table  = 'sekolah as a';
+		$table  = 'subkategori as a';
 		$select = 'a.*';
 
 		$replace_field  = [

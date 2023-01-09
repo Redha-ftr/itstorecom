@@ -24,7 +24,7 @@ class Category extends Base_Controller {
 	
 	public function index()
 	{
-		$this->data['title'] = $this->lang->line('menu_category');
+		$this->data['title'] = $this->lang->line('menu_kategori');
 		$this->data['subview'] = 'category/main';
 		$this->load->view('components/main', $this->data);
 	}
@@ -41,7 +41,7 @@ class Category extends Base_Controller {
 	{
 		$this->load->model('group_m');
 
-		$data['title']			= $this->lang->line('menu_category');
+		$data['title']			= $this->lang->line('menu_kategori');
 		$data['groups'] 		= $this->group_m->all();
 		$data['index'] 			= $this->input->post('index');
 
@@ -74,7 +74,7 @@ class Category extends Base_Controller {
 	{
 		$rules = [
 			[
-				'field' => 'nama_sekolah',
+				'field' => 'nama_kategori',
 				'label' => 'form',
 				'rules' => 'required'
 			]
@@ -117,10 +117,10 @@ class Category extends Base_Controller {
 
 	public function create()
 	{
-		$data['nama_sekolah']    	= $this->input->post('nama_sekolah');
+		$data['nama_kategori']    	= $this->input->post('nama_kategori');
 		$data['nis_nss_dns']    	= $this->input->post('nis_nss_dns');
 		$data['npsn']    			= $this->input->post('npsn');
-		$data['alamat_sekolah']    	= $this->input->post('alamat_sekolah');
+		$data['alamat_kategori']    	= $this->input->post('alamat_kategori');
 		$data['kelurahan_desa']    	= $this->input->post('kelurahan_desa');
 		$data['kecamatan']   		= $this->input->post('kecamatan');
 		$data['kota_kabupaten']    	= $this->input->post('kota_kabupaten');
@@ -139,13 +139,13 @@ class Category extends Base_Controller {
 		$data['created_at']   			= date('Y-m-d H:i:s');
 		$data['updated_at']   			= date('Y-m-d H:i:s');
 		$data['softdelete']   			= '0';
-		$this->db->insert('sekolah', $data); 
+		$this->db->insert('kategori', $data); 
 
 
 		//log data
 		$record_id  = $this->db->insert_id();
 		$log_akses 	= log_akses('Create','Tambah Sekolah');
-		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
+		$log_change = log_change($log_akses,'kategori', $record_id, $data);
 
 
 		header('Content-Type: application/json');
@@ -162,10 +162,10 @@ class Category extends Base_Controller {
 
 	public function update()
 	{
-		$data['nama_sekolah']    	= $this->input->post('nama_sekolah');
+		$data['nama_kategori']    	= $this->input->post('nama_kategori');
 		$data['nis_nss_dns']    	= $this->input->post('nis_nss_dns');
 		$data['npsn']    			= $this->input->post('npsn');
-		$data['alamat_sekolah']    	= $this->input->post('alamat_sekolah');
+		$data['alamat_kategori']    	= $this->input->post('alamat_kategori');
 		$data['kelurahan_desa']    	= $this->input->post('kelurahan_desa');
 		$data['kecamatan']   		= $this->input->post('kecamatan');
 		$data['kota_kabupaten']    	= $this->input->post('kota_kabupaten');
@@ -183,14 +183,14 @@ class Category extends Base_Controller {
 		$data['users_updated']   	= $this->session->userdata('active_user')->id;
 
 		$this->db->where('id', $this->input->post('id'));
-		$this->db->update('sekolah', $data); 
+		$this->db->update('kategori', $data); 
 
 
 
 		//log data
 		$record_id  = $this->input->post('id');
 		$log_akses 	= log_akses('Update','Ubah Sekolah');
-		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
+		$log_change = log_change($log_akses,'kategori', $record_id, $data);
 
 
 
@@ -215,13 +215,13 @@ class Category extends Base_Controller {
 		$data['users_updated']   	= $this->session->userdata('active_user')->id;
 		
 		$this->db->where('id', $this->input->post('id'));
-		$this->db->update('sekolah', $data); 
+		$this->db->update('kategori', $data); 
 
 
 		//log data
 		$record_id  = $this->input->post('id');
 		$log_akses 	= log_akses('Delete','Hapus Sekolah');
-		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
+		$log_change = log_change($log_akses,'kategori', $record_id, $data);
 
 		header('Content-Type: application/json');
     	echo json_encode('success');

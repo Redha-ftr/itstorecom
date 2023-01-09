@@ -166,3 +166,21 @@ $lang['title_logo_pemerintah']					= 'Logo Pemerintah';
 
 $lang['title_sekolah'] 							= 'Sekolah';
 
+
+
+//Menu Kategori
+$lang['title_kategori'] 						= 'Kategori';
+
+//menu artikel
+$lang['title_judul'] 							= 'Judul';
+$lang['title_deskripsi'] 						= 'Deskripsi';
+
+//menu brand
+$lang['title_brand'] 							= 'Brand';
+
+//menu official brand
+$lang['title_official_brand'] 					= 'Official Brand';
+
+//menu produk
+$lang['title_brand'] 							= 'Brand';
+
