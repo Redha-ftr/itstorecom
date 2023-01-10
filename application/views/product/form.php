@@ -24,17 +24,17 @@
 				</div>
 				<div class="form-group">
 				  <label for=""> <?=$this->lang->line('title_kode')?> </label>
-				  <input class="form-control" name="kode" placeholder="<?=$this->lang->line('placeholder_kode')?>" type="text">
-				  <div class="validation-message" data-field="kode"></div>
+				  <input class="form-control" name="code" placeholder="<?=$this->lang->line('placeholder_kode')?>" type="text">
+				  <div class="validation-message" data-field="code"></div>
 				</div>
 				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_berat')?> </label>
+				  <label for=""> <?=$this->lang->line('title_berat')?> (gram) </label>
 				  <input class="form-control" name="berat" placeholder="<?=$this->lang->line('placeholder_berat')?>" type="text">
 				  <div class="validation-message" data-field="berat"></div>
 				</div>
 				<div class="form-group">
 				  	<label for=""> <?=$this->lang->line('title_kategori')?> </label>
-				  	<select name="kategori_id" class="form-control">
+				  	<select name="kategori_id" class="form-control select2">
 				  		<?php foreach (get_table('kategori','id','nama') as $key => $value) { ?>
 							<option value="<?=$value->id?>"><?=$value->nama?></option>
 						<?php } ?>
@@ -43,8 +43,8 @@
 				</div>
 				<div class="form-group">
 				  <label for=""> <?=$this->lang->line('title_subkategori')?> </label>
-				  <select name="subkategori_id" class="form-control">
-						<?php foreach ($subkategori as $key => $value) { ?>
+				  <select name="subkategori_id" class="form-control select2">
+						<?php foreach (get_table('subkategori','id','nama') as $key => $value) { ?>
 							<option value="<?php echo $value->id; ?>"><?php echo $value->nama; ?></option>
 						<?php } ?>
 					</select>
@@ -55,8 +55,8 @@
 				</div>
 				<div class="form-group">
 				  <label for=""> <?=$this->lang->line('title_brand')?> </label>
-				  <select name="brand_id" class="form-control">
-						<?php foreach ($brand as $key => $value) { ?>
+				  <select name="brand_id" class="form-control select2">
+						<?php foreach (get_table('brand','id','nama') as $key => $value) { ?>
 							<option value="<?php echo $value->id; ?>"><?php echo $value->nama; ?></option>
 						<?php } ?>
 					</select>
@@ -106,8 +106,8 @@
 				</div>
 				<div class="form-group">
 				  <label for=""> <?=$this->lang->line('title_official_brand')?> </label>
-				  <select name="official_brand_id" class="form-control">
-						<?php foreach ($nama as $key => $value) { ?>
+				  <select name="official_brand_id" class="form-control select2">
+						<?php foreach (get_table('official_brand','id','nama') as $key => $value) { ?>
 							<option value="<?php echo $value->id; ?>"><?php echo $value->nama; ?></option>
 						<?php } ?>
 					</select>
@@ -132,7 +132,7 @@
 		        <div class="form-group">
 		          <label for=""> <?=$this->lang->line('title_detail_foto')?></label>
 		          <div class="uploader-wrapper">
-		            <button type="button" class="btn btn-primary picker-uploader">
+		            <button type="button" class="btn btn-primary picker-uploader-detail">
 		              <i class="fa fa-cloud-upload"></i> <?=$this->lang->line('button_upload')?> </button>
 		          </div>
 		          <div class="validation-message" data-field="images_detail"></div>
@@ -210,7 +210,7 @@
 		})
 
 
-		var uploader_pemerintah = $('.picker-uploader-pemerintah').uploader({
+		var uploader_detail = $('.picker-uploader-detail').uploader({
 			upload_url: '<?php echo base_url() . 'uploader/upload'; ?>',
 			file_picker_url: '<?php echo base_url() . 'uploader/files'; ?>',
 			input_name: 'images_detail',

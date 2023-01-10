@@ -77,7 +77,32 @@ class Product extends Base_Controller {
 				'field' => 'nama_produk',
 				'label' => 'form',
 				'rules' => 'required'
+			],
+
+			[
+				'field' => 'code',
+				'label' => 'form',
+				'rules' => 'required|is_unique[produk.code]'
+			],
+
+			[
+				'field' => 'sku',
+				'label' => 'form',
+				'rules' => 'required|is_unique[produk.sku]'
+			],
+
+			[
+				'field' => 'harga',
+				'label' => 'form',
+				'rules' => 'required'
+			],
+
+			[
+				'field' => 'stok',
+				'label' => 'form',
+				'rules' => 'required'
 			]
+			
 		];
 
 		$this->form_validation->set_rules($rules);

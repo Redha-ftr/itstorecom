@@ -55,11 +55,11 @@ class Product_m extends CI_Model {
 
 	public function getJson($input)
 	{
-		$table  = 'product as a';
+		$table  = 'produk as a';
 		$select = 'a.*';
 
 		$replace_field  = [
-			['old_name' => 'nama', 'new_name' => 'a.nama']
+			['old_name' => 'nama_produk', 'new_name' => 'a.nama_produk']
 		];
 
 		$param = [
