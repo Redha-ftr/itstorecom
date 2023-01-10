@@ -19,8 +19,8 @@
 				</div>
 				<div class="form-group">
 				  <label for=""> <?=$this->lang->line('title_kategori')?> </label>
-				  <select class="form-control" name="kategori_id">
-					<?php foreach ($kategori as $key => $value) { ?>
+				  <select class="form-control select2" name="kategori_id">
+				  <?php foreach (get_table('kategori','id','nama') as $key => $value) { ?>
 								<option value="<?php echo $value->id; ?>"><?php echo $value->nama; ?></option>
 							<?php } ?>
 					</select>
