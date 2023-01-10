@@ -48,7 +48,7 @@
 
 <script type="text/javascript">
 	var datagrid = $("#datagrid").datagrid({
-		url						: "<?php echo base_url() . 'brand/data'; ?>",
+		url						: "<?php echo base_url() . 'product/data'; ?>",
 		primaryField			: 'id', 
 		sortBy					: 'id',
 		orderBy					: 'ASC',
@@ -62,9 +62,24 @@
 	    itemsPerPage			: 100,
 	    itemsPerPageOption 		: [100, 200, 300, 400, 500],
 		columns					: [
-		{field: 'nama', title: '<?=$this->lang->line('nama')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
-		{field: 'images', title: 'Images', editable: true, sortable: false, width: '', align: 'center', search: true},
-		{field: 'kategori_id', title: 'Category ID', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'nama_produk', title: '<?=$this->lang->line('nama')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'sku', title: '<?=$this->lang->line('title_sku')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'code', title: '<?=$this->lang->line('title_kode')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'berat', title: '<?=$this->lang->line('title_berat')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'kategori_id', title: '<?=$this->lang->line('title_kategori')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'subkategori_id', title: '<?=$this->lang->line('title_subkategori')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'brand_id', title: '<?=$this->lang->line('title_brand')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'kategori_brand', title: '<?=$this->lang->line('title_kategori_brand')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'tags', title: '<?=$this->lang->line('title_tag')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'deskripsi', title: '<?=$this->lang->line('title_deskripsi')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'harga', title: '<?=$this->lang->line('title_harga')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'stok', title: '<?=$this->lang->line('title_stok')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'images', title: '<?=$this->lang->line('title_foto_produk')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'images_detail', title: '<?=$this->lang->line('title_detail_foto')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'harga_promo', title: '<?=$this->lang->line('title_harga_promo')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'link_wa', title: '<?=$this->lang->line('title_link_Wa')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'official_brand_id', title: '<?=$this->lang->line('title_official_brand')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'bestseller_id', title: '<?=$this->lang->line('title_bestseller')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
 		{field: 'menu', title: '<?=$this->lang->line('aksi')?>', sortable: false, width: 100, align: 'center', search: false, 
 		rowStyler: function(rowData, rowIndex) {
 			return menu(rowData, rowIndex)
@@ -81,7 +96,7 @@
 	}
 
 	function create_update_form(rowIndex) {
-		$.post("<?php echo base_url() . 'brand/form'; ?>", {index : rowIndex}).done(function(data) {
+		$.post("<?php echo base_url() . 'product/form'; ?>", {index : rowIndex}).done(function(data) {
 			$('.form-panel').html(data)
 		})
 	}
@@ -98,7 +113,7 @@
 			closeOnConfirm: true 
 		}, function() {
 			var row = datagrid.getRowData(rowIndex)
-			$.post("<?php echo base_url() . 'brand/delete'; ?>", {id : row.id}).done(function(data) {
+			$.post("<?php echo base_url() . 'product/delete'; ?>", {id : row.id}).done(function(data) {
 				$('.loading-panel').hide();
 				$('.form-panel').hide();
 				$('.datagrid-panel').fadeIn();

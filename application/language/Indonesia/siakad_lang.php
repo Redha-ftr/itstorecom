@@ -178,6 +178,7 @@ $lang['placeholder_kategori'] 					= 'Masukkan Kategori';
 $lang['title_judul'] 							= 'Judul';
 $lang['placeholder_judul']                      = 'Masukkan Judul';
 $lang['title_deskripsi'] 						= 'Deskripsi';
+$lang['placeholder_deskripsi'] 					= 'Masukkan Deskripsi';
 
 //menu brand
 $lang['title_brand'] 							= 'Brand';
@@ -208,7 +209,11 @@ $lang['title_harga_promo'] 						= 'Harga Promo';
 $lang['placeholder_harga_promo'] 				= 'Masukkan Harga Promo';
 $lang['title_link_Wa'] 							= 'Link WhatsApp';
 $lang['placeholder_link_Wa'] 					= 'Masukkan Link WhatsApp';
-$lang['title_bestseller'] 						= 'Best Seller';
+$lang['title_berat'] 							= 'Berat';
+$lang['placeholder_berat'] 						= 'Masukkan Berat';
+$lang['title_kategori_brand'] 					= 'Kategori Brand';
+$lang['placeholder_kategori_brand'] 			= 'Masukkan Kategori Brand';
+$lang['title_bestseller'] 						= 'Bestseller';
 
 //menu social media
 $lang['title_social_media'] 					= 'Media Sosial';
@@ -220,3 +225,6 @@ $lang['title_subkategori'] 						= 'Subkategori';
 $lang['placeholder_subkategori'] 				= 'Masukkan Subkategori';
 
 $lang['button_upload'] 					        = 'Upload Gambar';
+
+$lang['title_ya'] 					      	  	= 'Ya';
+$lang['title_tidak'] 					        = 'Tidak';
