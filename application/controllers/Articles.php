@@ -59,7 +59,7 @@ class Articles extends Base_Controller {
 	public function data()
 	{
         header('Content-Type: application/json');
-		echo json_encode($this->sekolah_m->getJson($this->input->post()));
+		echo json_encode($this->articles_m->getJson($this->input->post()));
 	}
 
 	/**
@@ -74,7 +74,7 @@ class Articles extends Base_Controller {
 	{
 		$rules = [
 			[
-				'field' => 'nama_sekolah',
+				'field' => 'judul',
 				'label' => 'form',
 				'rules' => 'required'
 			]
@@ -117,21 +117,8 @@ class Articles extends Base_Controller {
 
 	public function create()
 	{
-		$data['nama_sekolah']    	= $this->input->post('nama_sekolah');
-		$data['nis_nss_dns']    	= $this->input->post('nis_nss_dns');
-		$data['npsn']    			= $this->input->post('npsn');
-		$data['alamat_sekolah']    	= $this->input->post('alamat_sekolah');
-		$data['kelurahan_desa']    	= $this->input->post('kelurahan_desa');
-		$data['kecamatan']   		= $this->input->post('kecamatan');
-		$data['kota_kabupaten']    	= $this->input->post('kota_kabupaten');
-		$data['provinsi']    		= $this->input->post('provinsi');
-		$data['website']   			= $this->input->post('website');
-		$data['email']    			= $this->input->post('email');
-		$data['telepon']    		= $this->input->post('telepon');
-		$data['visi']    			= $this->input->post('visi');
-		$data['misi']    			= $this->input->post('misi');
-		$data['logo']    			= $this->input->post('logo');
-		$data['logo_pemerintah']    = $this->input->post('logo_pemerintah');
+		$data['judul']    	= $this->input->post('judul');
+		$data['deskripsi']    	= $this->input->post('deskripsi');
 
 		//log
 		$data['users_created']   		= $this->session->userdata('active_user')->id;
@@ -139,13 +126,13 @@ class Articles extends Base_Controller {
 		$data['created_at']   			= date('Y-m-d H:i:s');
 		$data['updated_at']   			= date('Y-m-d H:i:s');
 		$data['softdelete']   			= '0';
-		$this->db->insert('sekolah', $data); 
+		$this->db->insert('artikel', $data); 
 
 
 		//log data
 		$record_id  = $this->db->insert_id();
-		$log_akses 	= log_akses('Create','Tambah Official brand');
-		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
+		$log_akses 	= log_akses('Create','Tambah Articles');
+		$log_change = log_change($log_akses,'artikel', $record_id, $data);
 
 
 		header('Content-Type: application/json');
@@ -153,7 +140,7 @@ class Articles extends Base_Controller {
 	}
 
 	/**
-     * Update Existing Official brand
+     * Update Existing Articles
      *
      * @access 	public
      * @param 	
@@ -162,35 +149,22 @@ class Articles extends Base_Controller {
 
 	public function update()
 	{
-		$data['nama_sekolah']    	= $this->input->post('nama_sekolah');
+		$data['judul']    	= $this->input->post('judul');
 		$data['nis_nss_dns']    	= $this->input->post('nis_nss_dns');
-		$data['npsn']    			= $this->input->post('npsn');
-		$data['alamat_sekolah']    	= $this->input->post('alamat_sekolah');
-		$data['kelurahan_desa']    	= $this->input->post('kelurahan_desa');
-		$data['kecamatan']   		= $this->input->post('kecamatan');
-		$data['kota_kabupaten']    	= $this->input->post('kota_kabupaten');
-		$data['provinsi']    		= $this->input->post('provinsi');
-		$data['website']   			= $this->input->post('website');
-		$data['email']    			= $this->input->post('email');
-		$data['telepon']    		= $this->input->post('telepon');
-		$data['visi']    			= $this->input->post('visi');
-		$data['misi']    			= $this->input->post('misi');
-		$data['logo']    			= $this->input->post('logo');
-		$data['logo_pemerintah']    = $this->input->post('logo_pemerintah');
 
 		//log
 		$data['updated_at']   		= date('Y-m-d H:i:s');
 		$data['users_updated']   	= $this->session->userdata('active_user')->id;
 
 		$this->db->where('id', $this->input->post('id'));
-		$this->db->update('sekolah', $data); 
+		$this->db->update('artikel', $data); 
 
 
 
 		//log data
 		$record_id  = $this->input->post('id');
-		$log_akses 	= log_akses('Update','Ubah Official brand');
-		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
+		$log_akses 	= log_akses('Update','Ubah Articles');
+		$log_change = log_change($log_akses,'artikel', $record_id, $data);
 
 
 
@@ -215,13 +189,13 @@ class Articles extends Base_Controller {
 		$data['users_updated']   	= $this->session->userdata('active_user')->id;
 		
 		$this->db->where('id', $this->input->post('id'));
-		$this->db->update('sekolah', $data); 
+		$this->db->update('artikel', $data); 
 
 
 		//log data
 		$record_id  = $this->input->post('id');
-		$log_akses 	= log_akses('Delete','Hapus Official brand');
-		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
+		$log_akses 	= log_akses('Delete','Hapus Articles');
+		$log_change = log_change($log_akses,'artikel', $record_id, $data);
 
 		header('Content-Type: application/json');
     	echo json_encode('success');

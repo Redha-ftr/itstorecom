@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Category extends Base_Controller {
+class Sekolah extends Base_Controller {
 
 	/**
-     * List of Categorys
+     * List of Sekolahs
      *
      * @access 	public
      * @param 	
@@ -15,7 +15,7 @@ class Category extends Base_Controller {
     {
         parent::__construct();
         
-		$this->load->model('category_m');
+		$this->load->model('sekolah_m');
 		$this->load->language('siakad', $this->session->userdata('language'));
     }
 	
@@ -24,13 +24,13 @@ class Category extends Base_Controller {
 	
 	public function index()
 	{
-		$this->data['title'] = $this->lang->line('menu_category');
-		$this->data['subview'] = 'category/main';
+		$this->data['title'] = $this->lang->line('menu_sekolah');
+		$this->data['subview'] = 'sekolah/main';
 		$this->load->view('components/main', $this->data);
 	}
 
 	/**
-     * Category Form
+     * Sekolah Form
      *
      * @access 	public
      * @param 	
@@ -41,11 +41,11 @@ class Category extends Base_Controller {
 	{
 		$this->load->model('group_m');
 
-		$data['title']			= $this->lang->line('menu_category');
+		$data['title']			= $this->lang->line('menu_sekolah');
 		$data['groups'] 		= $this->group_m->all();
 		$data['index'] 			= $this->input->post('index');
 
-		$this->load->view('category/form', $data);
+		$this->load->view('sekolah/form', $data);
 	}
 
 	/**
@@ -59,7 +59,7 @@ class Category extends Base_Controller {
 	public function data()
 	{
         header('Content-Type: application/json');
-		echo json_encode($this->category_m->getJson($this->input->post()));
+		echo json_encode($this->sekolah_m->getJson($this->input->post()));
 	}
 
 	/**
@@ -74,7 +74,7 @@ class Category extends Base_Controller {
 	{
 		$rules = [
 			[
-				'field' => 'nama',
+				'field' => 'nama_sekolah',
 				'label' => 'form',
 				'rules' => 'required'
 			]
@@ -108,7 +108,7 @@ class Category extends Base_Controller {
 	}
 
 	/**
-     * Create a New Category
+     * Create a New Sekolah
      *
      * @access 	public
      * @param 	
@@ -117,8 +117,21 @@ class Category extends Base_Controller {
 
 	public function create()
 	{
-		$data['nama']    	= $this->input->post('nama');
-		$data['images']    			= $this->input->post('images');
+		$data['nama_sekolah']    	= $this->input->post('nama_sekolah');
+		$data['nis_nss_dns']    	= $this->input->post('nis_nss_dns');
+		$data['npsn']    			= $this->input->post('npsn');
+		$data['alamat_sekolah']    	= $this->input->post('alamat_sekolah');
+		$data['kelurahan_desa']    	= $this->input->post('kelurahan_desa');
+		$data['kecamatan']   		= $this->input->post('kecamatan');
+		$data['kota_kabupaten']    	= $this->input->post('kota_kabupaten');
+		$data['provinsi']    		= $this->input->post('provinsi');
+		$data['website']   			= $this->input->post('website');
+		$data['email']    			= $this->input->post('email');
+		$data['telepon']    		= $this->input->post('telepon');
+		$data['visi']    			= $this->input->post('visi');
+		$data['misi']    			= $this->input->post('misi');
+		$data['logo']    			= $this->input->post('logo');
+		$data['logo_pemerintah']    = $this->input->post('logo_pemerintah');
 
 		//log
 		$data['users_created']   		= $this->session->userdata('active_user')->id;
@@ -126,13 +139,13 @@ class Category extends Base_Controller {
 		$data['created_at']   			= date('Y-m-d H:i:s');
 		$data['updated_at']   			= date('Y-m-d H:i:s');
 		$data['softdelete']   			= '0';
-		$this->db->insert('category', $data); 
+		$this->db->insert('sekolah', $data); 
 
 
 		//log data
 		$record_id  = $this->db->insert_id();
-		$log_akses 	= log_akses('Create','Tambah Category');
-		$log_change = log_change($log_akses,'category', $record_id, $data);
+		$log_akses 	= log_akses('Create','Tambah Sekolah');
+		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
 
 
 		header('Content-Type: application/json');
@@ -140,7 +153,7 @@ class Category extends Base_Controller {
 	}
 
 	/**
-     * Update Existing Category
+     * Update Existing Sekolah
      *
      * @access 	public
      * @param 	
@@ -149,22 +162,35 @@ class Category extends Base_Controller {
 
 	public function update()
 	{
-		$data['nama']    			= $this->input->post('nama');
-		$data['images']    			= $this->input->post('images');
+		$data['nama_sekolah']    	= $this->input->post('nama_sekolah');
+		$data['nis_nss_dns']    	= $this->input->post('nis_nss_dns');
+		$data['npsn']    			= $this->input->post('npsn');
+		$data['alamat_sekolah']    	= $this->input->post('alamat_sekolah');
+		$data['kelurahan_desa']    	= $this->input->post('kelurahan_desa');
+		$data['kecamatan']   		= $this->input->post('kecamatan');
+		$data['kota_kabupaten']    	= $this->input->post('kota_kabupaten');
+		$data['provinsi']    		= $this->input->post('provinsi');
+		$data['website']   			= $this->input->post('website');
+		$data['email']    			= $this->input->post('email');
+		$data['telepon']    		= $this->input->post('telepon');
+		$data['visi']    			= $this->input->post('visi');
+		$data['misi']    			= $this->input->post('misi');
+		$data['logo']    			= $this->input->post('logo');
+		$data['logo_pemerintah']    = $this->input->post('logo_pemerintah');
 
 		//log
 		$data['updated_at']   		= date('Y-m-d H:i:s');
 		$data['users_updated']   	= $this->session->userdata('active_user')->id;
 
 		$this->db->where('id', $this->input->post('id'));
-		$this->db->update('category', $data); 
+		$this->db->update('sekolah', $data); 
 
 
 
 		//log data
 		$record_id  = $this->input->post('id');
-		$log_akses 	= log_akses('Update','Ubah Category');
-		$log_change = log_change($log_akses,'category', $record_id, $data);
+		$log_akses 	= log_akses('Update','Ubah Sekolah');
+		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
 
 
 
@@ -173,7 +199,7 @@ class Category extends Base_Controller {
 	}
 
 	/**
-     * Delete a Category
+     * Delete a Sekolah
      *
      * @access 	public
      * @param 	
@@ -189,13 +215,13 @@ class Category extends Base_Controller {
 		$data['users_updated']   	= $this->session->userdata('active_user')->id;
 		
 		$this->db->where('id', $this->input->post('id'));
-		$this->db->update('category', $data); 
+		$this->db->update('sekolah', $data); 
 
 
 		//log data
 		$record_id  = $this->input->post('id');
-		$log_akses 	= log_akses('Delete','Hapus Category');
-		$log_change = log_change($log_akses,'category', $record_id, $data);
+		$log_akses 	= log_akses('Delete','Hapus Sekolah');
+		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
 
 		header('Content-Type: application/json');
     	echo json_encode('success');

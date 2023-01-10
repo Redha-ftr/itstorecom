@@ -1,6 +1,6 @@
 <?php
 
-class Category_m extends CI_Model {
+class Sekolah_m extends CI_Model {
 
 	function __construct()
 	{
@@ -9,7 +9,7 @@ class Category_m extends CI_Model {
 	}
 
 	/**
-     * Check Brand Credentials
+     * Check Sekolah Credentials
      *
      * @access 	public
      * @param 	
@@ -18,7 +18,7 @@ class Category_m extends CI_Model {
 
     public function all()
     {
-        $query = $this->db->from('kategori u')
+        $query = $this->db->from('sekolah u')
                         ->select('u.*')
                         ->where('u.softdelete', '0')
                         ->get();
@@ -27,7 +27,7 @@ class Category_m extends CI_Model {
     }
 
 	/**
-     * Get Brand by ID
+     * Get Sekolah by ID
      *
      * @access 	public
      * @param 	
@@ -36,7 +36,7 @@ class Category_m extends CI_Model {
 
 	public function get_user($id)
 	{
-		$query = $this->db->from('kategori u')
+		$query = $this->db->from('sekolah u')
 						->select('u.*')
 						->where('u.id', $id)
 						->where('u.softdelete', '0')
@@ -55,11 +55,11 @@ class Category_m extends CI_Model {
 
 	public function getJson($input)
 	{
-		$table  = 'kategori as a';
+		$table  = 'sekolah as a';
 		$select = 'a.*';
 
 		$replace_field  = [
-			['old_name' => 'nama', 'new_name' => 'a.nama']
+			['old_name' => 'nama_sekolah', 'new_name' => 'a.nama_sekolah']
 		];
 
 		$param = [

@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Subcategory extends Base_Controller {
 
 	/**
-     * List of Sekolahs
+     * List of Subcategorys
      *
      * @access 	public
      * @param 	
@@ -30,7 +30,7 @@ class Subcategory extends Base_Controller {
 	}
 
 	/**
-     * Sekolah Form
+     * Subcategory Form
      *
      * @access 	public
      * @param 	
@@ -74,7 +74,7 @@ class Subcategory extends Base_Controller {
 	{
 		$rules = [
 			[
-				'field' => 'nama_sekolah',
+				'field' => 'nama',
 				'label' => 'form',
 				'rules' => 'required'
 			]
@@ -108,7 +108,7 @@ class Subcategory extends Base_Controller {
 	}
 
 	/**
-     * Create a New Sekolah
+     * Create a New Subcategory
      *
      * @access 	public
      * @param 	
@@ -117,21 +117,8 @@ class Subcategory extends Base_Controller {
 
 	public function create()
 	{
-		$data['nama_sekolah']    	= $this->input->post('nama_sekolah');
-		$data['nis_nss_dns']    	= $this->input->post('nis_nss_dns');
-		$data['npsn']    			= $this->input->post('npsn');
-		$data['alamat_sekolah']    	= $this->input->post('alamat_sekolah');
-		$data['kelurahan_desa']    	= $this->input->post('kelurahan_desa');
-		$data['kecamatan']   		= $this->input->post('kecamatan');
-		$data['kota_kabupaten']    	= $this->input->post('kota_kabupaten');
-		$data['provinsi']    		= $this->input->post('provinsi');
-		$data['website']   			= $this->input->post('website');
-		$data['email']    			= $this->input->post('email');
-		$data['telepon']    		= $this->input->post('telepon');
-		$data['visi']    			= $this->input->post('visi');
-		$data['misi']    			= $this->input->post('misi');
-		$data['logo']    			= $this->input->post('logo');
-		$data['logo_pemerintah']    = $this->input->post('logo_pemerintah');
+		$data['nama']    	= $this->input->post('nama');
+		$data['kategori_id']    	= $this->input->post('kategori_id');
 
 		//log
 		$data['users_created']   		= $this->session->userdata('active_user')->id;
@@ -139,13 +126,13 @@ class Subcategory extends Base_Controller {
 		$data['created_at']   			= date('Y-m-d H:i:s');
 		$data['updated_at']   			= date('Y-m-d H:i:s');
 		$data['softdelete']   			= '0';
-		$this->db->insert('sekolah', $data); 
+		$this->db->insert('subkategori', $data); 
 
 
 		//log data
 		$record_id  = $this->db->insert_id();
-		$log_akses 	= log_akses('Create','Tambah Sekolah');
-		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
+		$log_akses 	= log_akses('Create','Tambah Subcategory');
+		$log_change = log_change($log_akses,'subkategori', $record_id, $data);
 
 
 		header('Content-Type: application/json');
@@ -153,7 +140,7 @@ class Subcategory extends Base_Controller {
 	}
 
 	/**
-     * Update Existing Sekolah
+     * Update Existing Subcategory
      *
      * @access 	public
      * @param 	
@@ -162,35 +149,22 @@ class Subcategory extends Base_Controller {
 
 	public function update()
 	{
-		$data['nama_sekolah']    	= $this->input->post('nama_sekolah');
-		$data['nis_nss_dns']    	= $this->input->post('nis_nss_dns');
-		$data['npsn']    			= $this->input->post('npsn');
-		$data['alamat_sekolah']    	= $this->input->post('alamat_sekolah');
-		$data['kelurahan_desa']    	= $this->input->post('kelurahan_desa');
-		$data['kecamatan']   		= $this->input->post('kecamatan');
-		$data['kota_kabupaten']    	= $this->input->post('kota_kabupaten');
-		$data['provinsi']    		= $this->input->post('provinsi');
-		$data['website']   			= $this->input->post('website');
-		$data['email']    			= $this->input->post('email');
-		$data['telepon']    		= $this->input->post('telepon');
-		$data['visi']    			= $this->input->post('visi');
-		$data['misi']    			= $this->input->post('misi');
-		$data['logo']    			= $this->input->post('logo');
-		$data['logo_pemerintah']    = $this->input->post('logo_pemerintah');
+		$data['nama']    	= $this->input->post('nama');
+		$data['kategori_id']    	= $this->input->post('kategori_id');
 
 		//log
 		$data['updated_at']   		= date('Y-m-d H:i:s');
 		$data['users_updated']   	= $this->session->userdata('active_user')->id;
 
 		$this->db->where('id', $this->input->post('id'));
-		$this->db->update('sekolah', $data); 
+		$this->db->update('subkategori', $data); 
 
 
 
 		//log data
 		$record_id  = $this->input->post('id');
-		$log_akses 	= log_akses('Update','Ubah Sekolah');
-		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
+		$log_akses 	= log_akses('Update','Ubah Subcategory');
+		$log_change = log_change($log_akses,'subkategori', $record_id, $data);
 
 
 
@@ -199,7 +173,7 @@ class Subcategory extends Base_Controller {
 	}
 
 	/**
-     * Delete a Sekolah
+     * Delete a Subcategory
      *
      * @access 	public
      * @param 	
@@ -215,13 +189,13 @@ class Subcategory extends Base_Controller {
 		$data['users_updated']   	= $this->session->userdata('active_user')->id;
 		
 		$this->db->where('id', $this->input->post('id'));
-		$this->db->update('sekolah', $data); 
+		$this->db->update('subkategori', $data); 
 
 
 		//log data
 		$record_id  = $this->input->post('id');
-		$log_akses 	= log_akses('Delete','Hapus Sekolah');
-		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
+		$log_akses 	= log_akses('Delete','Hapus Subcategory');
+		$log_change = log_change($log_akses,'subkategori', $record_id, $data);
 
 		header('Content-Type: application/json');
     	echo json_encode('success');
