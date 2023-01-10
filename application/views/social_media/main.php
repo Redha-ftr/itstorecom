@@ -48,7 +48,7 @@
 
 <script type="text/javascript">
 	var datagrid = $("#datagrid").datagrid({
-		url						: "<?php echo base_url() . 'sekolah/data'; ?>",
+		url						: "<?php echo base_url() . 'social_media/data'; ?>",
 		primaryField			: 'id', 
 		sortBy					: 'id',
 		orderBy					: 'ASC',
@@ -62,12 +62,8 @@
 	    itemsPerPage			: 100,
 	    itemsPerPageOption 		: [100, 200, 300, 400, 500],
 		columns					: [
-		{field: 'nama_sekolah', title: '<?=$this->lang->line('nama')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
-		{field: 'nis_nss_dns', title: 'NIS', editable: true, sortable: false, width: '', align: 'center', search: true},
-		{field: 'npsn', title: 'NPSN', editable: true, sortable: false, width: '', align: 'center', search: true},
-		{field: 'alamat_sekolah', title: '<?=$this->lang->line('alamat')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
-		{field: 'website', title: '<?=$this->lang->line('website')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
-		{field: 'email', title: '<?=$this->lang->line('email')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'nama', title: '<?=$this->lang->line('nama')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'link', title: 'NIS', editable: true, sortable: false, width: '', align: 'center', search: true}
 		{field: 'menu', title: '<?=$this->lang->line('aksi')?>', sortable: false, width: 100, align: 'center', search: false, 
 		rowStyler: function(rowData, rowIndex) {
 			return menu(rowData, rowIndex)
@@ -84,7 +80,7 @@
 	}
 
 	function create_update_form(rowIndex) {
-		$.post("<?php echo base_url() . 'sekolah/form'; ?>", {index : rowIndex}).done(function(data) {
+		$.post("<?php echo base_url() . 'social_media/form'; ?>", {index : rowIndex}).done(function(data) {
 			$('.form-panel').html(data)
 		})
 	}
@@ -101,7 +97,7 @@
 			closeOnConfirm: true 
 		}, function() {
 			var row = datagrid.getRowData(rowIndex)
-			$.post("<?php echo base_url() . 'sekolah/delete'; ?>", {id : row.id}).done(function(data) {
+			$.post("<?php echo base_url() . 'social_media/delete'; ?>", {id : row.id}).done(function(data) {
 				$('.loading-panel').hide();
 				$('.form-panel').hide();
 				$('.datagrid-panel').fadeIn();

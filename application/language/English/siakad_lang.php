@@ -172,6 +172,53 @@ $lang['title_sekolah'] 							= 'School';
 
 
 //Menu Kategori
+$lang['title_kategori'] 						= 'Category';
+$lang['placeholder_kategori'] 					= 'Enter Category';
+
+
+//menu artikel
+$lang['title_judul'] 							= 'Tittle';
+$lang['placeholder_judul']                      = 'Enter Tittle';
+$lang['title_deskripsi'] 						= 'Description';
+
+//menu brand
+$lang['title_brand'] 						= 'Brand';
+$lang['placeholder_brand'] 					= 'Enter Brand';
+
+//menu official brand
+$lang['title_official_brand'] 					= 'Official Brand';
+$lang['placeholder_official_brand']             = 'Enter Official Brand';
+
+//menu produk
+$lang['title_produk'] 							= 'Product';
+$lang['placeholder_produk']                     = 'Enter Products Name';
+$lang['title_sku'] 						        = 'SKU';
+$lang['placeholder_sku'] 					    = 'Enter SKU';
+$lang['title_kode'] 						= 'Code';
+$lang['placeholder_kode'] 					= 'Enter Code';
+$lang['title_tag'] 						= 'Tag';
+$lang['placeholder_tag'] 					= 'Enter Tag';
+$lang['title_harga'] 						= 'Price';
+$lang['placeholder_harga'] 					= 'Enter Price';
+$lang['title_stok'] 						= 'Stock';
+$lang['placeholder_stok'] 					= 'Enter Stock';
+$lang['title_foto_produk'] 						= 'Product Images';
+$lang['title_detail_foto'] 						= 'Image Detail';
+$lang['placeholder_detail_foto'] 					= 'Enter Image Detail';
+$lang['title_harga_promo'] 						= 'Promo';
+$lang['placeholder_harga_promo'] 					= 'Enter Promo';
+$lang['title_link_Wa'] 						= 'WhatsApp Link';
+$lang['placeholder_link_Wa'] 					= 'Enter WhatsApp Link';
+$lang['title_bestseller'] 						= 'Best Seller';
+
+//menu social media
+$lang['title_social_media'] 						= 'Social Media';
+$lang['placeholder_social_media'] 					= 'Enter Social Media';
+$lang['title_logo'] 						        = 'Logo';
+
+//menu subkategori
+$lang['title_subkategori'] 						= 'Subcategory';
+$lang['placeholder_subkategori'] 					= 'Enter Subcategory';
 
 
 
