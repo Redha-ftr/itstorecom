@@ -62,7 +62,9 @@
 	    itemsPerPage			: 100,
 	    itemsPerPageOption 		: [100, 200, 300, 400, 500],
 		columns					: [
-		{field: 'nama_kategori', title: '<?=$this->lang->line('title_kategori')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'nama', title: '<?=$this->lang->line('title_kategori')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'images', title: '<?=$this->lang->line('title_logo')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'link', title: 'Link', editable: true, sortable: false, width: '', align: 'center', search: true},
 		{field: 'menu', title: '<?=$this->lang->line('aksi')?>', sortable: false, width: 100, align: 'center', search: false, 
 		rowStyler: function(rowData, rowIndex) {
 			return menu(rowData, rowIndex)

@@ -9,7 +9,7 @@ class Category_m extends CI_Model {
 	}
 
 	/**
-     * Check Sekolah Credentials
+     * Check Brand Credentials
      *
      * @access 	public
      * @param 	
@@ -27,7 +27,7 @@ class Category_m extends CI_Model {
     }
 
 	/**
-     * Get Sekolah by ID
+     * Get Brand by ID
      *
      * @access 	public
      * @param 	
@@ -59,7 +59,7 @@ class Category_m extends CI_Model {
 		$select = 'a.*';
 
 		$replace_field  = [
-			['old_name' => 'nama_kategori', 'new_name' => 'a.nama_kategori']
+			['old_name' => 'nama', 'new_name' => 'a.nama']
 		];
 
 		$param = [

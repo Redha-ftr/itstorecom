@@ -18,7 +18,7 @@ class Social_media_m extends CI_Model {
 
     public function all()
     {
-        $query = $this->db->from('sekolah u')
+        $query = $this->db->from('social_media u')
                         ->select('u.*')
                         ->where('u.softdelete', '0')
                         ->get();
@@ -36,7 +36,7 @@ class Social_media_m extends CI_Model {
 
 	public function get_user($id)
 	{
-		$query = $this->db->from('sekolah u')
+		$query = $this->db->from('social_media u')
 						->select('u.*')
 						->where('u.id', $id)
 						->where('u.softdelete', '0')
@@ -55,11 +55,11 @@ class Social_media_m extends CI_Model {
 
 	public function getJson($input)
 	{
-		$table  = 'sekolah as a';
+		$table  = 'social_media as a';
 		$select = 'a.*';
 
 		$replace_field  = [
-			['old_name' => 'nama_sekolah', 'new_name' => 'a.nama_sekolah']
+			['old_name' => 'nama', 'new_name' => 'a.nama']
 		];
 
 		$param = [

@@ -24,13 +24,13 @@ class Category extends Base_Controller {
 	
 	public function index()
 	{
-		$this->data['title'] = $this->lang->line('menu_kategori');
+		$this->data['title'] = $this->lang->line('menu_category');
 		$this->data['subview'] = 'category/main';
 		$this->load->view('components/main', $this->data);
 	}
 
 	/**
-     * Sekolah Form
+     * Category Form
      *
      * @access 	public
      * @param 	
@@ -41,7 +41,7 @@ class Category extends Base_Controller {
 	{
 		$this->load->model('group_m');
 
-		$data['title']			= $this->lang->line('menu_kategori');
+		$data['title']			= $this->lang->line('menu_category');
 		$data['groups'] 		= $this->group_m->all();
 		$data['index'] 			= $this->input->post('index');
 
@@ -74,7 +74,7 @@ class Category extends Base_Controller {
 	{
 		$rules = [
 			[
-				'field' => 'nama_kategori',
+				'field' => 'nama',
 				'label' => 'form',
 				'rules' => 'required'
 			]
@@ -108,7 +108,7 @@ class Category extends Base_Controller {
 	}
 
 	/**
-     * Create a New Sekolah
+     * Create a New Category
      *
      * @access 	public
      * @param 	
@@ -117,7 +117,7 @@ class Category extends Base_Controller {
 
 	public function create()
 	{
-		$data['nama_kategori']    	= $this->input->post('nama_kategori');
+		$data['nama']    	= $this->input->post('nama');
 		$data['images']    			= $this->input->post('images');
 
 		//log
@@ -126,13 +126,13 @@ class Category extends Base_Controller {
 		$data['created_at']   			= date('Y-m-d H:i:s');
 		$data['updated_at']   			= date('Y-m-d H:i:s');
 		$data['softdelete']   			= '0';
-		$this->db->insert('kategori', $data); 
+		$this->db->insert('category', $data); 
 
 
 		//log data
 		$record_id  = $this->db->insert_id();
-		$log_akses 	= log_akses('Create','Tambah category');
-		$log_change = log_change($log_akses,'kategori', $record_id, $data);
+		$log_akses 	= log_akses('Create','Tambah Category');
+		$log_change = log_change($log_akses,'category', $record_id, $data);
 
 
 		header('Content-Type: application/json');
@@ -140,7 +140,7 @@ class Category extends Base_Controller {
 	}
 
 	/**
-     * Update Existing category
+     * Update Existing Category
      *
      * @access 	public
      * @param 	
@@ -149,7 +149,7 @@ class Category extends Base_Controller {
 
 	public function update()
 	{
-		$data['nama_kategori']    	= $this->input->post('nama_kategori');
+		$data['nama']    			= $this->input->post('nama');
 		$data['images']    			= $this->input->post('images');
 
 		//log
@@ -157,14 +157,14 @@ class Category extends Base_Controller {
 		$data['users_updated']   	= $this->session->userdata('active_user')->id;
 
 		$this->db->where('id', $this->input->post('id'));
-		$this->db->update('kategori', $data); 
+		$this->db->update('category', $data); 
 
 
 
 		//log data
 		$record_id  = $this->input->post('id');
-		$log_akses 	= log_akses('Update','Ubah category');
-		$log_change = log_change($log_akses,'kategori', $record_id, $data);
+		$log_akses 	= log_akses('Update','Ubah Category');
+		$log_change = log_change($log_akses,'category', $record_id, $data);
 
 
 
@@ -173,7 +173,7 @@ class Category extends Base_Controller {
 	}
 
 	/**
-     * Delete a category
+     * Delete a Category
      *
      * @access 	public
      * @param 	
@@ -189,13 +189,13 @@ class Category extends Base_Controller {
 		$data['users_updated']   	= $this->session->userdata('active_user')->id;
 		
 		$this->db->where('id', $this->input->post('id'));
-		$this->db->update('kategori', $data); 
+		$this->db->update('category', $data); 
 
 
 		//log data
 		$record_id  = $this->input->post('id');
-		$log_akses 	= log_akses('Delete','Hapus category');
-		$log_change = log_change($log_akses,'kategori', $record_id, $data);
+		$log_akses 	= log_akses('Delete','Hapus Category');
+		$log_change = log_change($log_akses,'category', $record_id, $data);
 
 		header('Content-Type: application/json');
     	echo json_encode('success');
