@@ -13,21 +13,18 @@
 		      <div class="content-box">
 		        <input type="text" name="id" class="hidden">
 		        <div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_nama_sekolah')?></label>
-				  <input class="form-control" name="nama_sekolah" placeholder="<?=$this->lang->line('placeholder_nama_sekolah')?>" type="text">
-				  <div class="validation-message" data-field="nama_sekolah"></div>
+				  <label for=""> <?=$this->lang->line('title_brand')?></label>
+				  <input class="form-control" name="nama_sekolah" placeholder="<?=$this->lang->line('placeholder_brand')?>" type="text">
+				  <div class="validation-message" data-field="nama"></div>
 				</div>
 				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_nis')?> </label>
-				  <input class="form-control" name="nis_nss_dns" placeholder="<?=$this->lang->line('placeholder_nis')?>" type="text">
-				  <div class="validation-message" data-field="nis_nss_dns"></div>
-				</div>
-				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_npsn')?> </label>
-				  <input class="form-control" name="npsn" placeholder="<?=$this->lang->line('placeholder_npsn')?>" type="text">
-				  <div class="validation-message" data-field="npsn"></div>
-				</div>
-
+		          <label for=""> <?=$this->lang->line('title_logo')?></label>
+		          <div class="uploader-wrapper">
+		            <button type="button" class="btn btn-primary picker-uploader">
+		              <i class="fa fa-cloud-upload"></i> <?=$this->lang->line('button_upload')?> </button>
+		          </div>
+		          <div class="validation-message" data-field="logo"></div>
+		        </div>
 				
 		      </div>
 		    </div>

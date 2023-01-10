@@ -178,8 +178,9 @@ $lang['placeholder_judul']                      = 'Masukkan Judul';
 $lang['title_deskripsi'] 						= 'Deskripsi';
 
 //menu brand
-$lang['title_brand'] 						= 'Brand';
-$lang['placeholder_brand'] 					= 'Masukkan Brand';
+$lang['title_brand'] 							= 'Brand';
+$lang['placeholder_brand'] 						= 'Masukkan Brand';
+$lang['title_foto'] 					        = 'Foto';
 
 //menu official brand
 $lang['title_official_brand'] 					= 'Official Brand';
@@ -190,28 +191,30 @@ $lang['title_produk'] 							= 'Produk';
 $lang['placeholder_produk']                     = 'Masukkan Nama Produk';
 $lang['title_sku'] 						        = 'SKU';
 $lang['placeholder_sku'] 					    = 'Masukkan SKU';
-$lang['title_kode'] 						= 'Kode';
-$lang['placeholder_kode'] 					= 'Masukkan Kode';
-$lang['title_tag'] 						= 'Tag';
-$lang['placeholder_tag'] 					= 'Masukkan Tag';
-$lang['title_harga'] 						= 'Harga';
-$lang['placeholder_harga'] 					= 'Masukkan Harga';
-$lang['title_stok'] 						= 'Stok';
-$lang['placeholder_stok'] 					= 'Masukkan Stok';
+$lang['title_kode'] 							= 'Kode';
+$lang['placeholder_kode'] 						= 'Masukkan Kode';
+$lang['title_tag'] 								= 'Tag';
+$lang['placeholder_tag'] 						= 'Masukkan Tag';
+$lang['title_harga'] 							= 'Harga';
+$lang['placeholder_harga'] 						= 'Masukkan Harga';
+$lang['title_stok'] 							= 'Stok';
+$lang['placeholder_stok'] 						= 'Masukkan Stok';
 $lang['title_foto_produk'] 						= 'Foto Produk';
 $lang['title_detail_foto'] 						= 'Detail Foto';
-$lang['placeholder_detail_foto'] 					= 'Masukkan Detail Foto';
+$lang['placeholder_detail_foto'] 				= 'Masukkan Detail Foto';
 $lang['title_harga_promo'] 						= 'Harga Promo';
-$lang['placeholder_harga_promo'] 					= 'Masukkan Harga Promo';
-$lang['title_link_Wa'] 						= 'Link WhatsApp';
+$lang['placeholder_harga_promo'] 				= 'Masukkan Harga Promo';
+$lang['title_link_Wa'] 							= 'Link WhatsApp';
 $lang['placeholder_link_Wa'] 					= 'Masukkan Link WhatsApp';
 $lang['title_bestseller'] 						= 'Best Seller';
 
 //menu social media
-$lang['title_social_media'] 						= 'Media Sosial';
-$lang['placeholder_social_media'] 					= 'Masukkan Media Sosial';
-$lang['title_logo'] 						        = 'Logo';
+$lang['title_social_media'] 					= 'Media Sosial';
+$lang['placeholder_social_media'] 				= 'Masukkan Media Sosial';
+$lang['title_logo'] 					        = 'Logo';
 
 //menu subkategori
 $lang['title_subkategori'] 						= 'Subkategori';
-$lang['placeholder_subkategori'] 					= 'Masukkan Subkategori';
+$lang['placeholder_subkategori'] 				= 'Masukkan Subkategori';
+
+$lang['button_upload'] 					        = 'Upload gambar';
