@@ -117,21 +117,24 @@ class Product extends Base_Controller {
 
 	public function create()
 	{
-		$data['nama_sekolah']    	= $this->input->post('nama_sekolah');
-		$data['nis_nss_dns']    	= $this->input->post('nis_nss_dns');
-		$data['npsn']    			= $this->input->post('npsn');
-		$data['alamat_sekolah']    	= $this->input->post('alamat_sekolah');
-		$data['kelurahan_desa']    	= $this->input->post('kelurahan_desa');
-		$data['kecamatan']   		= $this->input->post('kecamatan');
-		$data['kota_kabupaten']    	= $this->input->post('kota_kabupaten');
-		$data['provinsi']    		= $this->input->post('provinsi');
-		$data['website']   			= $this->input->post('website');
-		$data['email']    			= $this->input->post('email');
-		$data['telepon']    		= $this->input->post('telepon');
-		$data['visi']    			= $this->input->post('visi');
-		$data['misi']    			= $this->input->post('misi');
-		$data['logo']    			= $this->input->post('logo');
-		$data['logo_pemerintah']    = $this->input->post('logo_pemerintah');
+		$data['nama_produk']    	= $this->input->post('nama_produk');
+		$data['sku']    	= $this->input->post('sku');
+		$data['code']    			= $this->input->post('code');
+		$data['berat']    	= $this->input->post('berat');
+		$data['kategori_id']    	= $this->input->post('kategori_id');
+		$data['subkategori_id']   		= $this->input->post('subkategori_id');
+		$data['brand_id']    	= $this->input->post('brand_id');
+		$data['kategori_brand']    		= $this->input->post('kategori_brand');
+		$data['tags']   			= $this->input->post('tags');
+		$data['deskripsi']    			= $this->input->post('deskripsi');
+		$data['harga']    		= $this->input->post('harga');
+		$data['stok']    			= $this->input->post('stok');
+		$data['images']    			= $this->input->post('images');
+		$data['images_detail']    			= $this->input->post('images_detail');
+		$data['harga_promo']    			= $this->input->post('harga_promo');
+		$data['link_wa']    			= $this->input->post('link_wa');
+		$data['official_brand_id']    			= $this->input->post('official_brand_id');
+		$data['bestseller_id']    			= $this->input->post('bestseller_id');
 
 		//log
 		$data['users_created']   		= $this->session->userdata('active_user')->id;
@@ -139,13 +142,13 @@ class Product extends Base_Controller {
 		$data['created_at']   			= date('Y-m-d H:i:s');
 		$data['updated_at']   			= date('Y-m-d H:i:s');
 		$data['softdelete']   			= '0';
-		$this->db->insert('sekolah', $data); 
+		$this->db->insert('product', $data); 
 
 
 		//log data
 		$record_id  = $this->db->insert_id();
 		$log_akses 	= log_akses('Create','Tambah Product');
-		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
+		$log_change = log_change($log_akses,'product', $record_id, $data);
 
 
 		header('Content-Type: application/json');
@@ -162,35 +165,38 @@ class Product extends Base_Controller {
 
 	public function update()
 	{
-		$data['nama_sekolah']    	= $this->input->post('nama_sekolah');
-		$data['nis_nss_dns']    	= $this->input->post('nis_nss_dns');
-		$data['npsn']    			= $this->input->post('npsn');
-		$data['alamat_sekolah']    	= $this->input->post('alamat_sekolah');
-		$data['kelurahan_desa']    	= $this->input->post('kelurahan_desa');
-		$data['kecamatan']   		= $this->input->post('kecamatan');
-		$data['kota_kabupaten']    	= $this->input->post('kota_kabupaten');
-		$data['provinsi']    		= $this->input->post('provinsi');
-		$data['website']   			= $this->input->post('website');
-		$data['email']    			= $this->input->post('email');
-		$data['telepon']    		= $this->input->post('telepon');
-		$data['visi']    			= $this->input->post('visi');
-		$data['misi']    			= $this->input->post('misi');
-		$data['logo']    			= $this->input->post('logo');
-		$data['logo_pemerintah']    = $this->input->post('logo_pemerintah');
+		$data['nama_produk']    	= $this->input->post('nama_produk');
+		$data['sku']    	= $this->input->post('sku');
+		$data['code']    			= $this->input->post('code');
+		$data['berat']    	= $this->input->post('berat');
+		$data['kategori_id']    	= $this->input->post('kategori_id');
+		$data['subkategori_id']   		= $this->input->post('subkategori_id');
+		$data['brand_id']    	= $this->input->post('brand_id');
+		$data['kategori_brand']    		= $this->input->post('kategori_brand');
+		$data['tags']   			= $this->input->post('tags');
+		$data['deskripsi']    			= $this->input->post('deskripsi');
+		$data['harga']    		= $this->input->post('harga');
+		$data['stok']    			= $this->input->post('stok');
+		$data['images']    			= $this->input->post('images');
+		$data['images_detail']    			= $this->input->post('images_detail');
+		$data['harga_promo']    			= $this->input->post('harga_promo');
+		$data['link_wa']    			= $this->input->post('link_wa');
+		$data['official_brand_id']    			= $this->input->post('official_brand_id');
+		$data['bestseller_id']    			= $this->input->post('bestseller_id');
 
 		//log
 		$data['updated_at']   		= date('Y-m-d H:i:s');
 		$data['users_updated']   	= $this->session->userdata('active_user')->id;
 
 		$this->db->where('id', $this->input->post('id'));
-		$this->db->update('sekolah', $data); 
+		$this->db->update('product', $data); 
 
 
 
 		//log data
 		$record_id  = $this->input->post('id');
 		$log_akses 	= log_akses('Update','Ubah Product');
-		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
+		$log_change = log_change($log_akses,'product', $record_id, $data);
 
 
 
@@ -215,13 +221,13 @@ class Product extends Base_Controller {
 		$data['users_updated']   	= $this->session->userdata('active_user')->id;
 		
 		$this->db->where('id', $this->input->post('id'));
-		$this->db->update('sekolah', $data); 
+		$this->db->update('product', $data); 
 
 
 		//log data
 		$record_id  = $this->input->post('id');
 		$log_akses 	= log_akses('Delete','Hapus Product');
-		$log_change = log_change($log_akses,'sekolah', $record_id, $data);
+		$log_change = log_change($log_akses,'product', $record_id, $data);
 
 		header('Content-Type: application/json');
     	echo json_encode('success');

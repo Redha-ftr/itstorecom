@@ -119,8 +119,6 @@ class Brand extends Base_Controller {
 	{
 		$data['nama']    			= $this->input->post('nama');
 		$data['images']    			= $this->input->post('images');
-		$data['kategori_id']  		= $this->input->post('kategori_id');
-		$data['logo']    			= $this->input->post('logo');
 
 		//log
 		$data['users_created']   		= $this->session->userdata('active_user')->id;
@@ -153,8 +151,6 @@ class Brand extends Base_Controller {
 	{
 		$data['nama']    			= $this->input->post('nama');
 		$data['images']    			= $this->input->post('images');
-		$data['kategori_id']    	= $this->input->post('kategori_id');
-		$data['logo']    			= $this->input->post('logo');
 
 		//log
 		$data['updated_at']   		= date('Y-m-d H:i:s');

@@ -13,94 +13,23 @@
 		      <div class="content-box">
 		        <input type="text" name="id" class="hidden">
 		        <div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_nama_sekolah')?></label>
-				  <input class="form-control" name="nama_sekolah" placeholder="<?=$this->lang->line('placeholder_nama_sekolah')?>" type="text">
-				  <div class="validation-message" data-field="nama_sekolah"></div>
+				  <label for=""> <?=$this->lang->line('title_official_brand')?></label>
+				  <input class="form-control" name="nama" placeholder="<?=$this->lang->line('placeholder_official_brand')?>" type="text">
+				  <div class="validation-message" data-field="nama"></div>
 				</div>
 				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_nis')?> </label>
-				  <input class="form-control" name="nis_nss_dns" placeholder="<?=$this->lang->line('placeholder_nis')?>" type="text">
-				  <div class="validation-message" data-field="nis_nss_dns"></div>
-				</div>
-				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_npsn')?> </label>
-				  <input class="form-control" name="npsn" placeholder="<?=$this->lang->line('placeholder_npsn')?>" type="text">
-				  <div class="validation-message" data-field="npsn"></div>
-				</div>
-				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_alamat_sekolah')?> </label>
-				  <input class="form-control" name="alamat_sekolah" placeholder="<?=$this->lang->line('placeholder_alamat_sekolah')?>" type="text">
-				  <div class="validation-message" data-field="alamat_sekolah"></div>
-				</div>
-				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_kelurahan_desa')?></label>
-				  <input class="form-control" name="kelurahan_desa" placeholder="<?=$this->lang->line('placeholder_kelurahan_desa')?>" type="text">
-				  <div class="validation-message" data-field="kelurahan_desa"></div>
-				</div>
-				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_kecamatan')?></label>
-				  <input class="form-control" name="kecamatan" placeholder="<?=$this->lang->line('placeholder_kecamatan')?>" type="text">
-				  <div class="validation-message" data-field="kecamatan"></div>
-				</div>
-				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_kota_kabupaten')?></label>
-				  <input class="form-control" name="kota_kabupaten" placeholder="<?=$this->lang->line('placeholder_kota_kabupaten')?>" type="text">
-				  <div class="validation-message" data-field="kota_kabupaten"></div>
-				</div>
-				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_provinsi')?></label>
-				  <input class="form-control" name="provinsi" placeholder="<?=$this->lang->line('placeholder_provinsi')?>" type="text">
-				  <div class="validation-message" data-field="provinsi"></div>
-				</div>
+		          <label for=""> <?=$this->lang->line('title_logo')?></label>
+		          <div class="uploader-wrapper">
+		            <button type="button" class="btn btn-primary picker-uploader">
+		              <i class="fa fa-cloud-upload"></i> <?=$this->lang->line('button_upload')?> </button>
+		          </div>
+		          <div class="validation-message" data-field="images"></div>
+		        </div>
 				
 		      </div>
 		    </div>
 
-		    <div class="col-md-6">
-		      <div class="content-box">
-		      	<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_website')?></label>
-				  <input class="form-control" name="website" placeholder="<?=$this->lang->line('placeholder_website')?>" type="text">
-				  <div class="validation-message" data-field="website"></div>
-				</div>
-				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_email')?></label>
-				  <input class="form-control" name="email" placeholder="<?=$this->lang->line('placeholder_email')?>" type="text">
-				  <div class="validation-message" data-field="email"></div>
-				</div>
-				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_telepon')?></label>
-				  <input class="form-control" name="telepon" placeholder="<?=$this->lang->line('placeholder_telepon')?>" type="text">
-				  <div class="validation-message" data-field="telepon"></div>
-				</div>
-				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_visi')?></label>
-				  <input class="form-control" name="visi" placeholder="<?=$this->lang->line('placeholder_visi')?>" type="text">
-				  <div class="validation-message" data-field="visi"></div>
-				</div>
-				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_misi')?></label>
-				  <input class="form-control" name="misi" placeholder="<?=$this->lang->line('placeholder_misi')?>" type="text">
-				  <div class="validation-message" data-field="misi"></div>
-				</div>
-		        <div class="form-group">
-		          <label for=""> <?=$this->lang->line('title_logo_sekolah')?></label>
-		          <div class="uploader-wrapper">
-		            <button type="button" class="btn btn-primary picker-uploader">
-		              <i class="fa fa-cloud-upload"></i> Upload Logo </button>
-		          </div>
-		          <div class="validation-message" data-field="logo"></div>
-		        </div>
-		        <div class="form-group">
-		          <label for=""> <?=$this->lang->line('title_logo_pemerintah')?></label>
-		          <div class="uploader-wrapper">
-		            <button type="button" class="btn btn-primary picker-uploader-pemerintah">
-		              <i class="fa fa-cloud-upload"></i> Upload Logo </button>
-		          </div>
-		          <div class="validation-message" data-field="logo_pemerintah"></div>
-		        </div>
-		      </div>
-		  </div>
+		    
 		  </div>
 		</div>
 	</div>
@@ -140,7 +69,7 @@
 		var uploader = $('.picker-uploader').uploader({
 			upload_url: '<?php echo base_url() . 'uploader/upload'; ?>',
 			file_picker_url: '<?php echo base_url() . 'uploader/files'; ?>',
-			input_name: 'logo',
+			input_name: 'images',
 			maximum_total_files: 1,
 			maximum_file_size: 102400000,
 			file_types_allowed: ['image/jpeg', 
@@ -172,39 +101,6 @@
 		})
 
 
-		var uploader_pemerintah = $('.picker-uploader-pemerintah').uploader({
-			upload_url: '<?php echo base_url() . 'uploader/upload'; ?>',
-			file_picker_url: '<?php echo base_url() . 'uploader/files'; ?>',
-			input_name: 'logo_pemerintah',
-			maximum_total_files: 1,
-			maximum_file_size: 102400000,
-			file_types_allowed: ['image/jpeg', 
-								'image/png', 
-								'image/vnd.adobe.photoshop',
-								'application/msword',
-								'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-								'application/vnd.ms-powerpoint',
-								'application/vnd.openxmlformats-officedocument.presentationml.presentation',
-								'application/pdf',
-								'application/vnd.ms-powerpoint',
-								'application/vnd.openxmlformats-officedocument.presentationml.slideshow',
-								'application/vnd.ms-excel',
-								'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-								'application/xml',
-								'text/plain',
-								'image/*',
-								'text/csv',
-								'text/xml',
-								'video/mp4', 
-								'video/quicktime'],
-			on_error: function(err) {
-				swal({
-					title: "Upload Failed",
-					text: err.messages,
-					type: "warning"
-				})
-			}
-		})
 		
 		if (index != '') {
 			datagrid.formLoad('#form-action', index);
@@ -221,7 +117,7 @@
 		$('#form-action').disable([".action"]);
 		$("button[title='save']").html("Validating data, please wait...");
 		$.ajax({
-			url: "<?php echo base_url() . 'sekolah/validate'; ?>", async: false, type: 'POST', data: formData,
+			url: "<?php echo base_url() . 'official_brand/validate'; ?>", async: false, type: 'POST', data: formData,
 			success: function(data, textStatus, jqXHR) {
 				returnData = data;
 			}
@@ -247,7 +143,7 @@
 
 	function save(formData) {
 		$("button[title='save']").html("Saving data, please wait...");
-		$.post("<?php echo base_url() . 'sekolah/action'; ?>", formData).done(function(data) {
+		$.post("<?php echo base_url() . 'official_brand/action'; ?>", formData).done(function(data) {
 			$('.datagrid-panel').fadeIn();
 			$('.form-panel').fadeOut();
 			datagrid.reload();

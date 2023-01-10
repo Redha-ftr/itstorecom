@@ -64,7 +64,6 @@
 		columns					: [
 		{field: 'nama', title: '<?=$this->lang->line('nama')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
 		{field: 'images', title: 'Images', editable: true, sortable: false, width: '', align: 'center', search: true},
-		{field: 'kategori_id', title: 'Category ID', editable: true, sortable: false, width: '', align: 'center', search: true},
 		{field: 'menu', title: '<?=$this->lang->line('aksi')?>', sortable: false, width: 100, align: 'center', search: false, 
 		rowStyler: function(rowData, rowIndex) {
 			return menu(rowData, rowIndex)

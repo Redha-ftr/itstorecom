@@ -14,7 +14,7 @@
 		        <input type="text" name="id" class="hidden">
 		        <div class="form-group">
 				  <label for=""> <?=$this->lang->line('title_brand')?></label>
-				  <input class="form-control" name="nama_sekolah" placeholder="<?=$this->lang->line('placeholder_brand')?>" type="text">
+				  <input class="form-control" name="nama" placeholder="<?=$this->lang->line('placeholder_brand')?>" type="text">
 				  <div class="validation-message" data-field="nama"></div>
 				</div>
 				<div class="form-group">
@@ -23,24 +23,13 @@
 		            <button type="button" class="btn btn-primary picker-uploader">
 		              <i class="fa fa-cloud-upload"></i> <?=$this->lang->line('button_upload')?> </button>
 		          </div>
-		          <div class="validation-message" data-field="logo"></div>
+		          <div class="validation-message" data-field="images"></div>
 		        </div>
 				
 		      </div>
 		    </div>
 
-		    <div class="col-md-6">
-		      <div class="content-box">
-		        <div class="form-group">
-		          <label for=""> <?=$this->lang->line('title_logo_sekolah')?></label>
-		          <div class="uploader-wrapper">
-		            <button type="button" class="btn btn-primary picker-uploader">
-		              <i class="fa fa-cloud-upload"></i> Upload Image </button>
-		          </div>
-		          <div class="validation-message" data-field="logo"></div>
-		        </div>
-		      </div>
-		  </div>
+		    
 		  </div>
 		</div>
 	</div>
@@ -80,7 +69,7 @@
 		var uploader = $('.picker-uploader').uploader({
 			upload_url: '<?php echo base_url() . 'uploader/upload'; ?>',
 			file_picker_url: '<?php echo base_url() . 'uploader/files'; ?>',
-			input_name: 'logo',
+			input_name: 'images',
 			maximum_total_files: 1,
 			maximum_file_size: 102400000,
 			file_types_allowed: ['image/jpeg', 
@@ -111,40 +100,6 @@
 			}
 		})
 
-
-		var uploader_pemerintah = $('.picker-uploader-pemerintah').uploader({
-			upload_url: '<?php echo base_url() . 'uploader/upload'; ?>',
-			file_picker_url: '<?php echo base_url() . 'uploader/files'; ?>',
-			input_name: 'logo_pemerintah',
-			maximum_total_files: 1,
-			maximum_file_size: 102400000,
-			file_types_allowed: ['image/jpeg', 
-								'image/png', 
-								'image/vnd.adobe.photoshop',
-								'application/msword',
-								'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-								'application/vnd.ms-powerpoint',
-								'application/vnd.openxmlformats-officedocument.presentationml.presentation',
-								'application/pdf',
-								'application/vnd.ms-powerpoint',
-								'application/vnd.openxmlformats-officedocument.presentationml.slideshow',
-								'application/vnd.ms-excel',
-								'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-								'application/xml',
-								'text/plain',
-								'image/*',
-								'text/csv',
-								'text/xml',
-								'video/mp4', 
-								'video/quicktime'],
-			on_error: function(err) {
-				swal({
-					title: "Upload Failed",
-					text: err.messages,
-					type: "warning"
-				})
-			}
-		})
 		
 		if (index != '') {
 			datagrid.formLoad('#form-action', index);
