@@ -56,10 +56,11 @@ class Articles_m extends CI_Model {
 	public function getJson($input)
 	{
 		$table  = 'artikel as a';
-		$select = 'a.*';
+		$select = 'a.id, a.judul, a.deskripsi, SUBSTR(a.deskripsi, 1, 80) AS deskripsi_format';
 
 		$replace_field  = [
-			['old_name' => 'judul', 'new_name' => 'a.judul']
+			['old_name' => 'judul', 'new_name' => 'a.judul'],
+			['old_name' => 'deskripsi_format', 'new_name' => 'a.deskripsi']
 		];
 
 		$param = [

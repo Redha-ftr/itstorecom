@@ -1,3 +1,4 @@
+<script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/ckeditor/ckeditor.js'; ?>"></script>
 <div class="content">
 	<div class="panel">
 		<div class="content-header no-mg-top">
@@ -9,7 +10,7 @@
 		    <div class="col-md-12">
 		      <div class="content-box">
 		  <div class="row">
-		    <div class="col-md-6">
+		    <div class="col-md-12">
 		      <div class="content-box">
 		        <input type="text" name="id" class="hidden">
 		        <div class="form-group">
@@ -18,16 +19,22 @@
 				  <div class="validation-message" data-field="judul"></div>
 				</div>
 				<div class="form-group">
-				  <label for=""> <?=$this->lang->line('title_deskripsi')?> </label>
-				  <input class="form-control" name="deskripsi" placeholder="" type="text">
-				  <div class="validation-message" data-field="deskripsi"></div>
-				</div>
-		      </div>
-		    </div>
+							<label for=""> Deskripsi</label>
+							<textarea cols="80" id="ckeditor_deskripsi" name="deskripsi" rows="10"></textarea>
 
-		    <div class="col-md-6">
+							<textarea cols="80" class="hidden" id="deskripsi_simpan" name="deskripsi_simpan" rows="50"></textarea>
+							<div class="validation-message" data-field="deskripsi"></div>
+						</div>
 		      
-		  </div>
+		      <div class="form-group">
+		          <label for=""> <?=$this->lang->line('title_logo')?></label>
+		          <div class="uploader-wrapper">
+		            <button type="button" class="btn btn-primary picker-uploader">
+		              <i class="fa fa-cloud-upload"></i> <?=$this->lang->line('button_upload')?> </button>
+		          </div>
+		          <div class="validation-message" data-field="images"></div>
+		        </div>
+		    </div>
 		  </div>
 		</div>
 	</div>
@@ -53,11 +60,24 @@
 	</div>
 </div>
 
+<script type="text/javascript">
+	
+	// Ckeditor
+if ($('#ckeditor_deskripsi').length) {
+	CKEDITOR.replace('ckeditor_deskripsi')
+}
+
+
+</script>
 
 
 <script type="text/javascript">
-  $(".select2").select2();
+
+function save_ckeditor() {
+	document.getElementById('deskripsi_simpan').value =  CKEDITOR.instances.ckeditor_deskripsi.getData();
+}
 </script>
+
 
 <script type="text/javascript">
 
@@ -67,7 +87,7 @@
 		var uploader = $('.picker-uploader').uploader({
 			upload_url: '<?php echo base_url() . 'uploader/upload'; ?>',
 			file_picker_url: '<?php echo base_url() . 'uploader/files'; ?>',
-			input_name: 'logo',
+			input_name: 'images',
 			maximum_total_files: 1,
 			maximum_file_size: 102400000,
 			file_types_allowed: ['image/jpeg', 
@@ -96,47 +116,11 @@
 					type: "warning"
 				})
 			}
-		})
+		});
 
-
-		var uploader_pemerintah = $('.picker-uploader-pemerintah').uploader({
-			upload_url: '<?php echo base_url() . 'uploader/upload'; ?>',
-			file_picker_url: '<?php echo base_url() . 'uploader/files'; ?>',
-			input_name: 'logo_pemerintah',
-			maximum_total_files: 1,
-			maximum_file_size: 102400000,
-			file_types_allowed: ['image/jpeg', 
-								'image/png', 
-								'image/vnd.adobe.photoshop',
-								'application/msword',
-								'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-								'application/vnd.ms-powerpoint',
-								'application/vnd.openxmlformats-officedocument.presentationml.presentation',
-								'application/pdf',
-								'application/vnd.ms-powerpoint',
-								'application/vnd.openxmlformats-officedocument.presentationml.slideshow',
-								'application/vnd.ms-excel',
-								'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-								'application/xml',
-								'text/plain',
-								'image/*',
-								'text/csv',
-								'text/xml',
-								'video/mp4', 
-								'video/quicktime'],
-			on_error: function(err) {
-				swal({
-					title: "Upload Failed",
-					text: err.messages,
-					type: "warning"
-				})
-			}
-		})
-		
 		if (index != '') {
 			datagrid.formLoad('#form-action', index);
-			uploader.set_files(datagrid.getRowData(index).logo)
-			uploader_pemerintah.set_files(datagrid.getRowData(index).logo_pemerintah)
+			uploader.set_files(datagrid.getRowData(index).images)
 		}
 
 		$('.loading-panel').hide();
@@ -188,6 +172,7 @@
 
 	function form_routes(action) {
 		if (action == 'save') {
+			save_ckeditor();
 			var formData = $('#form-action').serialize();
 			if (validate(formData) == 'success') {
 				swal({   

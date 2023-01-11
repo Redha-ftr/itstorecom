@@ -52,16 +52,17 @@ $lang['menu_official_brand'] 					= 'Official Brand';
 $lang['menu_category'] 							= 'Category';
 $lang['menu_subcategory'] 						= 'Subcategory';
 $lang['menu_product'] 							= 'Product';
-$lang['menu_articles'] 							= 'Articles';
+$lang['menu_articles'] 							= 'Ulasan IT';
 $lang['menu_social_media'] 						= 'Social Media';
-
+$lang['menu_site_settings'] 					= 'Site Settings';
+$lang['menu_setting_slider'] 					= 'Slider & Promo';
 
 
 $lang['title_add'] 								= 'Add';
 $lang['title_delete'] 							= 'Delete';
 $lang['title_cancel'] 							= 'Cancel';
 $lang['title_save'] 							= 'Save';
-$lang['title_apps'] 							= 'Academic Information System';
+$lang['title_apps'] 							= 'IT STORE COM';
 $lang['menu_reset_password'] 					= 'Reset Password';
 $lang['gender_male'] 							= 'Male';
 $lang['gender_female'] 							= 'Female';

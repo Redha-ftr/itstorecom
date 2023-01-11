@@ -63,7 +63,7 @@
 	    itemsPerPageOption 		: [100, 200, 300, 400, 500],
 		columns					: [
 		{field: 'judul', title: '<?=$this->lang->line('title_judul')?>', editable: true, sortable: false, width: '', align: 'center', search: true},
-		{field: 'deskripsi', title: 'NIS', editable: true, sortable: false, width: '', align: 'center', search: true},
+		{field: 'deskripsi_format', title: 'Deskripsi', editable: true, sortable: false, width: '', align: 'center', search: true},
 		{field: 'menu', title: '<?=$this->lang->line('aksi')?>', sortable: false, width: 100, align: 'center', search: false, 
 		rowStyler: function(rowData, rowIndex) {
 			return menu(rowData, rowIndex)

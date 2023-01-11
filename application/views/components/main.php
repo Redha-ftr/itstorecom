@@ -17,19 +17,7 @@
 				<div class="quick-link">
 
 </div>
-
-
-
-
-
 				<div class="user-top-profile">
-							
-
-
-								
-							
-
-
 					<div class="user-image">
 						<div class="user-on"></div>
 						<img alt="pongo" style="width: 40px;height: 40px;" src="<?php echo base_url().'foto/'.$picture_users; ?>">
@@ -57,7 +45,7 @@
 			<ul>
 				<li style="text-align:center;">
 					<a href="<?php echo base_url(); ?>">
-						<img alt="pongo" style="width: 100px;height: auto;" src="<?=base_url()?>assets/images/logo_yayasan.png">
+						<img alt="pongo" style="width: 130px;height: auto;" src="<?=base_url()?>assets/images/logo.png">
 					</a>
 				</li>
 				<li class="<?php echo $active_menu == 0 ? 'active' : ''; ?>">
@@ -101,8 +89,7 @@
 
 		<div class="side-banner">
 			<div class="banner-content">
-				<div class="title">SIAKAD <div class="version">v1.1</div></div>
-				<div class="subtitle"><?=$this->lang->line('title_apps')?></div>
+				<div class="title" style="font-size: 14px;">IT STORE COM</div>
 				<div class="subtitle"><a href="<?=base_url()?>language/update/1" style="color: #ffffff;">English</a> | <a href="<?=base_url()?>language/update/2" style="color: #ffffff;">Indonesia</a></div>
 			</div>
 		</div>

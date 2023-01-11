@@ -30,7 +30,7 @@
       <title>Enterkomputer Jual Beli Online Komputer, Rakit PC, Termurah & Terlengkap</title>
       <link rel="icon" type="images/png" href="favicon.ico">
       <link rel="apple-touch-icon" href="favicon.ico">
-      <link rel="manifest" href="manifest.json">
+      <link rel="manifest" href="<?=base_url()?>frontend/manifest.json">
       <style>.btn-outline-light:hover {color: #000 !important;}</style>
       <link href="<?=base_url()?>frontend/assets/vendors/bootstrap/5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" >
       <link href="<?=base_url()?>frontend/assets/vendors/swiper-6.5.9/swiper-bundle.min.css" rel="stylesheet" >
@@ -47,8 +47,45 @@
          <link rel="stylesheet" href="<?=base_url()?>frontend/assets/vendors/fa-animation/css/font-awesome-animation.min.css">
          <link rel="stylesheet" href="<?=base_url()?>frontend/assets/vendors/placeholder-loading/dist/css/placeholder-loading.min.css">
       </noscript>
-      <style>:root {	--ico-bl: url(assets/img/ecomm/bl.png);	--ico-tp: url(assets/img/ecomm/tp.png);	--ico-sp: url(assets/img/ecomm/sp.png);	--ico-jd: url(assets/img/ecomm/jd.png);	--ico-wa: url(assets/img/ecomm/wa.png);	--download-app-bg: url(assets/img/bg/download-app.png);	--price-up: '\e800';	--price-down: '\e801';	--bs-body-font-size: 14px;	--header-color: #FFFFFF!important;--color-pallete-1: #ED1C24!important;--color-pallete-6: #ED1C24!important;--header-background: #ED1C24!important;	}	.ico-profile{color:#FFFFFF !important;} .simulation-icon i{color:#FFFFFF !important;} .menu__toggle .ico-menu{color:#FFFFFF !important;} .header--marketplace .ps-block--user-header a:hover{color: none !important;}	.qcw-trigger-btn.svelte-1xkyjie.svelte-1xkyjie {	padding: 5px 9px !important;	}	.qcw-trigger-btn.svelte-1xkyjie.svelte-1xkyjie {	margin-left: 5px;	}</style>
-      <script type="application/ld+json">{	"@type": "WebSite",	"@context": "https://schema.org/",	"name": "Enterkomputer Toko Rakit PC",	"url": "https://www.enterkomputer.com",	"potentialAction": {	"@type": "SearchAction",	"target": {	"@type": "EntryPoint",	"urlTemplate": "search?q={search_term_string}" },	"query-input": "required name=search_term_string"	},	"author": [{	"@type": "Organization",	"@context": "https://schema.org/",	"name": "Enterkomputer Toko Rakit PC",	"legalName": "Enterkomputer",	"url": "https://www.enterkomputer.com",	"logo": "https://assets.enterkomputer.com/frontend/logo/EK-logo.png",	"address": "Mangga Dua Mall Lt.3 No. 31-32 Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10730",	"contactPoint": [{	"telephone": "+62-21-3043-0333"	}]	}]}</script>
+     <style type="text/css">
+        
+        :root {
+        --ico-bl: url(assets/img/ecomm/bl.png);
+        --ico-tp: url(assets/img/ecomm/tp.png);
+        --ico-sp: url(assets/img/ecomm/sp.png);
+        --ico-jd: url(assets/img/ecomm/jd.png);
+        --ico-wa: url(assets/img/ecomm/wa.png);
+        --download-app-bg: url(assets/img/bg/download-app.png);
+        --price-up: "\e800";
+        --price-down: "\e801";
+        --bs-body-font-size: 14px;
+        --header-color: #ffffff !important;
+        --color-pallete-1: #4c6ef8 !important;
+        --color-pallete-6: #4c6ef8 !important;
+        --header-background: #4c6ef8 !important;
+      }
+      .ico-profile {
+        color: #ffffff !important;
+      }
+      .simulation-icon i {
+        color: #ffffff !important;
+      }
+      .menu__toggle .ico-menu {
+        color: #ffffff !important;
+      }
+      .header--marketplace .ps-block--user-header a:hover {
+        color: none !important;
+      }
+      .qcw-trigger-btn.svelte-1xkyjie.svelte-1xkyjie {
+        padding: 5px 9px !important;
+      }
+      .qcw-trigger-btn.svelte-1xkyjie.svelte-1xkyjie {
+        margin-left: 5px;
+      }
+
+
+     </style>
+      
    </head>
    <body>
       <header class="header header--standard header--marketplace header--sticky ">
@@ -399,7 +436,7 @@
                         </ul>
                      </div>
                   </div>
-                  <a class="ps-logo" href="" aria-label="Link"><img src="web-assets/frontend/themes/Logo-Enter-Natal-White.png" alt="Company Logo"></a>
+                  <a class="ps-logo" href="" aria-label="Link"><img src="<?=base_url()?>frontend/themes/Logo-Enter-Natal-White.png" alt="Company Logo"></a>
                </div>
                <div class="header__content-center">
                   <form action="search?q=" class="ps-form--quick-search form-search-group" method="GET" aria-label="search" enctype="text/plain" accept-charset="utf-8">
@@ -434,7 +471,7 @@
             <p class="mb-0 text-white">Welcome to EnterKomputer - Buka Setiap Hari, 10:00-18:00 WIB</p>
          </div>
          <div class="navigation--mobile">
-            <a class="ps-logo mobile-image__small" href="" aria-label="Link"><img src="web-assets/frontend/themes/Logo-Enter-Circle-Natal.png" alt=""></a><a class="ps-logo mobile-image__large" href="" aria-label="Link"><img src="web-assets/frontend/themes/Logo-Enter-Natal-White.png" alt=""></a>
+            <a class="ps-logo mobile-image__small" href="" aria-label="Link"><img src="<?=base_url()?>frontend/themes/Logo-Enter-Circle-Natal.png" alt=""></a><a class="ps-logo mobile-image__large" href="" aria-label="Link"><img src="<?=base_url()?>frontend/themes/Logo-Enter-Natal-White.png" alt=""></a>
             <form action="search?q=" class="ps-form--search-mobile ms-3" method="GET" aria-label="search" accept-charset="utf-8">
                <div class="form-group--nest">
                   <div class="form-group form-search-group">
@@ -450,11 +487,34 @@
          <main class="ps-main--marketplace ps-main--marketplace_full">
             <section class="ps-marketplace-banner" aria-label="bannerSection">
                <div class="swiper-container home-swiper">
+
+
                   <div class="swiper-wrapper">
-                     <div class="swiper-slide w-100" tabindex="-1"><a href="rakitan/O7MEVWHN/Paket-Rakitan-Admin-and-Office-INTEL" target="_blank"><img src="<?=base_url()?>frontend/assets/img/webp/home-slider.webp" data-src="web-assets/frontend/banner/home/Banner-Slider-Home-Paket-Rakitan_Office-1633090376.jpg" class="img-fluid w-100 swiper-lazy" alt="home slider"></a></div>
-                     <div class="swiper-slide w-100" tabindex="-1"><a href="official/Prime%20Gaming" target="_blank"><img src="<?=base_url()?>frontend/assets/img/webp/home-slider.webp" data-src="web-assets/frontend/banner/home/Banner-Slider-Home-Prosessor_AMD-1633330392.jpg" class="img-fluid w-100 swiper-lazy" alt="home slider"></a></div>
-                     <div class="swiper-slide w-100" tabindex="-1"><a href="category/101/solid-state-drive" target="_blank"><img src="<?=base_url()?>frontend/assets/img/webp/home-slider.webp" data-src="web-assets/frontend/banner/home/Banner-Slider-Home-Prosessor_Intel-1633090287.jpg" class="img-fluid w-100 swiper-lazy" alt="home slider"></a></div>
+                    <?php 
+                    if(strlen($slider_promo->slider) > 10){
+                        $obj = json_decode($slider_promo->slider);
+                        
+                        for ($i=0; $i < count($obj); $i++) {  
+                          $images = $obj[$i]->{'file_thumbnail'};
+                        ?>
+                           <div class="swiper-slide w-100" tabindex="-1">
+                            <img src="<?=$images?>" data-src="<?=$images?>" class="img-fluid w-100 swiper-lazy" alt="home slider">
+                          </div>
+                        <?php } 
+                    }else{ 
+                       $images = base_url().'frontend/assets/img/svg/productimage.svg';   
+                    ?>  
+                       <div class="swiper-slide w-100" tabindex="-1">
+                        <img src="<?=$images?>" data-src="<?=$images?>" class="img-fluid w-100 swiper-lazy" alt="home slider">
+                      </div>              
+                    <?php } ?>
+
+
+
                   </div>
+
+
+
                   <div class="swiper-button-next"></div>
                   <div class="swiper-button-prev"></div>
                   <div class="swiper-pagination"></div>
@@ -469,38 +529,38 @@
                      <div class="ps-categories-list text-center">
                         <div class="row ps-categories nowrap--mobile px-2">
                            <div class="row-contents">
-                              <div class="ps-categories__links" title="Notebook"><a href="category.html" title="Notebook" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Notebook" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/notebook.svg"/><strong>Notebook<br><small class="text-muted">1156 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Processor"><a href="category.html" title="Processor" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Processor" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/processor.svg"/><strong>Processor<br><small class="text-muted">189 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Motherboard"><a href="category.html" title="Motherboard" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Motherboard" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/motherboard.svg"/><strong>Motherboard<br><small class="text-muted">425 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="VGA"><a href="category.html" title="VGA" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="VGA" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/vga.svg"/><strong>VGA<br><small class="text-muted">421 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Hard Drive"><a href="category.html-disk" title="Hard Drive" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Hard Drive" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/harddisk.svg"/><strong>Hard Drive<br><small class="text-muted">472 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="SSD"><a href="category.html-state-drive" title="SSD" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="SSD" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/ssd.svg"/><strong>SSD<br><small class="text-muted">549 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="RAM"><a href="category.html-ram" title="RAM" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="RAM" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/ram.svg"/><strong>RAM<br><small class="text-muted">709 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="PSU"><a href="category.html" title="PSU" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="PSU" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/psu.svg"/><strong>PSU<br><small class="text-muted">391 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Casing"><a href="category.html" title="Casing" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Casing" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/casing.svg"/><strong>Casing<br><small class="text-muted">593 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="LCD"><a href="category.html" title="LCD" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="LCD" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/lcd.svg"/><strong>LCD<br><small class="text-muted">437 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Keyboard"><a href="category.html" title="Keyboard" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Keyboard" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/keyboard.svg"/><strong>Keyboard<br><small class="text-muted">1418 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Gaming Chair"><a href="category.html-chair" title="Gaming Chair" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Gaming Chair" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/gaming-chair.svg"/><strong>Gaming Chair<br><small class="text-muted">188 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Optical"><a href="category.html" title="Optical" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Optical" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/optical.svg"/><strong>Optical<br><small class="text-muted">11 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Cooler"><a href="category.html" title="Cooler" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Cooler" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/coolerfan.svg"/><strong>Cooler<br><small class="text-muted">734 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Printer"><a href="category.html" title="Printer" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Printer" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/printer.svg"/><strong>Printer<br><small class="text-muted">1052 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Notebook"><a href="category.html" title="Notebook" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Notebook" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/notebook.svg"/><strong>Notebook<br><small class="text-muted">1156 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Processor"><a href="category.html" title="Processor" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Processor" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/processor.svg"/><strong>Processor<br><small class="text-muted">189 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Motherboard"><a href="category.html" title="Motherboard" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Motherboard" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/motherboard.svg"/><strong>Motherboard<br><small class="text-muted">425 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="VGA"><a href="category.html" title="VGA" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="VGA" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/vga.svg"/><strong>VGA<br><small class="text-muted">421 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Hard Drive"><a href="category.html-disk" title="Hard Drive" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Hard Drive" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/harddisk.svg"/><strong>Hard Drive<br><small class="text-muted">472 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="SSD"><a href="category.html-state-drive" title="SSD" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="SSD" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/ssd.svg"/><strong>SSD<br><small class="text-muted">549 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="RAM"><a href="category.html-ram" title="RAM" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="RAM" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/ram.svg"/><strong>RAM<br><small class="text-muted">709 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="PSU"><a href="category.html" title="PSU" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="PSU" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/psu.svg"/><strong>PSU<br><small class="text-muted">391 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Casing"><a href="category.html" title="Casing" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Casing" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/casing.svg"/><strong>Casing<br><small class="text-muted">593 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="LCD"><a href="category.html" title="LCD" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="LCD" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/lcd.svg"/><strong>LCD<br><small class="text-muted">437 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Keyboard"><a href="category.html" title="Keyboard" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Keyboard" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/keyboard.svg"/><strong>Keyboard<br><small class="text-muted">1418 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Gaming Chair"><a href="category.html-chair" title="Gaming Chair" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Gaming Chair" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/gaming-chair.svg"/><strong>Gaming Chair<br><small class="text-muted">188 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Optical"><a href="category.html" title="Optical" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Optical" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/optical.svg"/><strong>Optical<br><small class="text-muted">11 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Cooler"><a href="category.html" title="Cooler" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Cooler" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/coolerfan.svg"/><strong>Cooler<br><small class="text-muted">734 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Printer"><a href="category.html" title="Printer" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Printer" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/printer.svg"/><strong>Printer<br><small class="text-muted">1052 Products</small></strong></a></div>
                            </div>
                            <div class="row-contents">
-                              <div class="ps-categories__links" title="Software"><a href="category.html" title="Software" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Software" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/software.svg"/><strong>Software<br><small class="text-muted">54 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Flash Drive"><a href="category.html-drive" title="Flash Drive" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Flash Drive" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/flashdrive.svg"/><strong>Flash Drive<br><small class="text-muted">296 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Memory Card"><a href="category.html-card" title="Memory Card" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Memory Card" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/memorycard.svg"/><strong>Memory Card<br><small class="text-muted">205 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="UPS"><a href="category.html" title="UPS" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="UPS" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/ups.svg"/><strong>UPS<br><small class="text-muted">618 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Networking"><a href=category.html" title="Networking" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Networking" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/networking.svg"/><strong>Networking<br><small class="text-muted">989 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="All In One"><a href="category.html-in-one" title="All In One" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="All In One" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/aio.svg"/><strong>All In One<br><small class="text-muted">1180 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Server"><a href="category.html" title="Server" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Server" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/server.svg"/><strong>Server<br><small class="text-muted">665 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Headset"><a href="category.html" title="Headset" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Headset" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/headset.svg"/><strong>Headset<br><small class="text-muted">690 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Projector"><a href="category.html" title="Projector" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Projector" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/projector.svg"/><strong>Projector<br><small class="text-muted">167 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Soundcard"><a href="category.html" title="Soundcard" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Soundcard" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/soundcard.svg"/><strong>Soundcard<br><small class="text-muted">3 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Speaker"><a href="category.html" title="Speaker" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Speaker" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/speaker.svg"/><strong>Speaker<br><small class="text-muted">225 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Accessories"><a href="category.html" title="Accessories" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Accessories" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/accessories.svg"/><strong>Accessories<br><small class="text-muted">1914 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Drawer"><a href="category.html" title="Drawer" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Drawer" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/drawingtablet.svg"/><strong>Drawer<br><small class="text-muted">43 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Gadget"><a href="category.html" title="Gadget" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Gadget" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/gadget.svg"/><strong>Gadget<br><small class="text-muted">595 Products</small></strong></a></div>
-                              <div class="ps-categories__links" title="Notebook Accessories"><a href="category.html" title="Notebook Accessories" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Notebook Accessories" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="web-assets/frontend/icon/svg/category/notebook-accessories.svg"/><strong>Notebook Accessories<br><small class="text-muted">1039 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Software"><a href="category.html" title="Software" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Software" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/software.svg"/><strong>Software<br><small class="text-muted">54 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Flash Drive"><a href="category.html-drive" title="Flash Drive" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Flash Drive" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/flashdrive.svg"/><strong>Flash Drive<br><small class="text-muted">296 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Memory Card"><a href="category.html-card" title="Memory Card" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Memory Card" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/memorycard.svg"/><strong>Memory Card<br><small class="text-muted">205 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="UPS"><a href="category.html" title="UPS" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="UPS" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/ups.svg"/><strong>UPS<br><small class="text-muted">618 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Networking"><a href=category.html" title="Networking" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Networking" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/networking.svg"/><strong>Networking<br><small class="text-muted">989 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="All In One"><a href="category.html-in-one" title="All In One" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="All In One" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/aio.svg"/><strong>All In One<br><small class="text-muted">1180 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Server"><a href="category.html" title="Server" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Server" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/server.svg"/><strong>Server<br><small class="text-muted">665 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Headset"><a href="category.html" title="Headset" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Headset" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/headset.svg"/><strong>Headset<br><small class="text-muted">690 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Projector"><a href="category.html" title="Projector" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Projector" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/projector.svg"/><strong>Projector<br><small class="text-muted">167 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Soundcard"><a href="category.html" title="Soundcard" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Soundcard" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/soundcard.svg"/><strong>Soundcard<br><small class="text-muted">3 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Speaker"><a href="category.html" title="Speaker" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Speaker" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/speaker.svg"/><strong>Speaker<br><small class="text-muted">225 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Accessories"><a href="category.html" title="Accessories" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Accessories" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/accessories.svg"/><strong>Accessories<br><small class="text-muted">1914 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Drawer"><a href="category.html" title="Drawer" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Drawer" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/drawingtablet.svg"/><strong>Drawer<br><small class="text-muted">43 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Gadget"><a href="category.html" title="Gadget" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Gadget" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/gadget.svg"/><strong>Gadget<br><small class="text-muted">595 Products</small></strong></a></div>
+                              <div class="ps-categories__links" title="Notebook Accessories"><a href="category.html" title="Notebook Accessories" class="ps-link--concern"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" alt="Notebook Accessories" class="img-fluid lazy-delay faa-pulse animated-hover" data-src="<?=base_url()?>frontend/icon/svg/category/notebook-accessories.svg"/><strong>Notebook Accessories<br><small class="text-muted">1039 Products</small></strong></a></div>
                            </div>
                         </div>
                      </div>
@@ -512,7 +572,7 @@
                      <div class="row g-0 ondiscount-product-list"></div>
                   </div>
                </div>
-               <section class="ps-marketplace--section ps-marketplace-promotion shadow" aria-label="rakitanSection"><a class="ps-collection" href="rakitan" aria-label="Link"><img src="web-assets/frontend/rakitan/Paket-PC-RAKITAN-HOME_2-1646104047.jpg" class="img-fluid" alt="rakitan enterkomputer"/></a></section>
+               <section class="ps-marketplace--section ps-marketplace-promotion shadow" aria-label="rakitanSection"><a class="ps-collection" href="rakitan" aria-label="Link"><img src="<?=base_url()?>frontend/rakitan/Paket-PC-RAKITAN-HOME_2-1646104047.jpg" class="img-fluid" alt="rakitan enterkomputer"/></a></section>
                <section class="ps-marketplace--section ps-marketplace-tags badge-0 p-0" aria-labelledby="marketplaceSection1" data-id="ps-marketplace-tags-0">
                   <div class="ps-section__header">
                      <h3 id="marketplaceSection1" class="ps-badge--title tags-header">Tag Title</h3>
@@ -798,14 +858,14 @@
                </div>
                <section class="ps-marketplace--section ps-marketplace-banner badge-0" aria-label="theme-banner">
                   <div class="ps-section__content">
-                     <a href="#" class="nocursor" aria-label="banner-link"><img class="w-100 lazy" src="<?=base_url()?>frontend/assets/img/webp/home-promotion.webp" data-src="web-assets/frontend/banner/home/Widget-Gaming_1-1633088773.jpg" alt="home-banner"></a>
+                     <a href="#" class="nocursor" aria-label="banner-link"><img class="w-100 lazy" src="<?=base_url()?>frontend/assets/img/webp/home-promotion.webp" data-src="<?=base_url()?>frontend/banner/home/Widget-Gaming_1-1633088773.jpg" alt="home-banner"></a>
                      <div class="row g-0">
-                        <div class="col-md-2 col-4"><a href="tags/Gaming%20Keyboard" aria-label="banner-link"><img class="w-100 lazy" src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" data-src="web-assets/frontend/banner/home/Widget-Gaming_1_Keyboard2-1633088785.jpg" alt="home-banner"></a></div>
-                        <div class="col-md-2 col-4"><a href="tags/gaming%20headset" aria-label="banner-link"><img class="w-100 lazy" src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" data-src="web-assets/frontend/banner/home/Widget-Gaming_1_Headset2-1633088802.jpg" alt="home-banner"></a></div>
-                        <div class="col-md-2 col-4"><a href="tags/gaming%20monitor" aria-label="banner-link"><img class="w-100 lazy" src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" data-src="web-assets/frontend/banner/home/Widget-Gaming_1_Monitor2-1633088818.jpg" alt="home-banner"></a></div>
-                        <div class="col-md-2 col-4"><a href="tags/gaming%20mouse" aria-label="banner-link"><img class="w-100 lazy" src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" data-src="web-assets/frontend/banner/home/Widget-Gaming_1_Mouse2-1633088836.jpg" alt="home-banner"></a></div>
-                        <div class="col-md-2 col-4"><a href="tags/Gaming%20Speaker" aria-label="banner-link"><img class="w-100 lazy" src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" data-src="web-assets/frontend/banner/home/Widget-Gaming_1_Speaker2-1633088850.jpg" alt="home-banner"></a></div>
-                        <div class="col-md-2 col-4"><a href="tags/Gaming%20Chair" aria-label="banner-link"><img class="w-100 lazy" src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" data-src="web-assets/frontend/banner/home/Widget-Gaming_1_kursi2-1633088862.jpg" alt="home-banner"></a></div>
+                        <div class="col-md-2 col-4"><a href="tags/Gaming%20Keyboard" aria-label="banner-link"><img class="w-100 lazy" src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" data-src="<?=base_url()?>frontend/banner/home/Widget-Gaming_1_Keyboard2-1633088785.jpg" alt="home-banner"></a></div>
+                        <div class="col-md-2 col-4"><a href="tags/gaming%20headset" aria-label="banner-link"><img class="w-100 lazy" src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" data-src="<?=base_url()?>frontend/banner/home/Widget-Gaming_1_Headset2-1633088802.jpg" alt="home-banner"></a></div>
+                        <div class="col-md-2 col-4"><a href="tags/gaming%20monitor" aria-label="banner-link"><img class="w-100 lazy" src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" data-src="<?=base_url()?>frontend/banner/home/Widget-Gaming_1_Monitor2-1633088818.jpg" alt="home-banner"></a></div>
+                        <div class="col-md-2 col-4"><a href="tags/gaming%20mouse" aria-label="banner-link"><img class="w-100 lazy" src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" data-src="<?=base_url()?>frontend/banner/home/Widget-Gaming_1_Mouse2-1633088836.jpg" alt="home-banner"></a></div>
+                        <div class="col-md-2 col-4"><a href="tags/Gaming%20Speaker" aria-label="banner-link"><img class="w-100 lazy" src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" data-src="<?=base_url()?>frontend/banner/home/Widget-Gaming_1_Speaker2-1633088850.jpg" alt="home-banner"></a></div>
+                        <div class="col-md-2 col-4"><a href="tags/Gaming%20Chair" aria-label="banner-link"><img class="w-100 lazy" src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" data-src="<?=base_url()?>frontend/banner/home/Widget-Gaming_1_kursi2-1633088862.jpg" alt="home-banner"></a></div>
                      </div>
                   </div>
                </section>
@@ -1069,9 +1129,9 @@
                   </div>
                   <div class="ps-section__content">
                      <div class="ps-marketplace-brands">
-                        <div class="row-contents"><a href="brand/amd" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/001-AMD.png" alt="AMD"/></a><a href="brand/intel" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/002-intel.png" alt="Intel"/></a><a href="brand/cubegaming" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/003-cubegaming.png" alt="Cubegaming"/></a><a href="brand/prime%20gaming" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/004-prime gaming.png" alt="Prime gaming"/></a><a href="brand/galax" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/005-galax.png" alt="Galax"/></a><a href="brand/klevv" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/006-klevv.png" alt="Klevv"/></a><a href="brand/adata" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/007-adata.png" alt="Adata"/></a><a href="brand/lian-li" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/008-lian li[lian-li].png" alt="Lian-li"/></a><a href="brand/geil" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/009-geil.png" alt="Geil"/></a><a href="brand/be%20quiet%21" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/010-be quiet!.png" alt="Be quiet!"/></a><a href="brand/xfx" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/011-xfx.png" alt="Xfx"/></a><a href="brand/seasonic" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/012-seasonic.png" alt="Seasonic"/></a><a href="brand/antec" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/013-antec.png" alt="Antec"/></a><a href="brand/1stplayer" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/014-1stplayer.png" alt="1stplayer"/></a><a href="brand/avexir" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/015-avexir.png" alt="Avexir"/></a></div>
-                        <div class="row-contents"><a href="brand/super%20flower" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/016-super flower.png" alt="Super flower"/></a><a href="brand/asrock" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/asrock.png" alt="Asrock"/></a><a href="brand/asus" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/asus.png" alt="Asus"/></a><a href="brand/biostar" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/biostar.png" alt="Biostar"/></a><a href="brand/corsair" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/corsair.png" alt="Corsair"/></a><a href="brand/cougar" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/cougar.png" alt="Cougar"/></a><a href="brand/cryorig" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/cryorig.png" alt="Cryorig"/></a><a href="brand/ecs" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/ecs.png" alt="Ecs"/></a><a href="brand/enlight" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/enlight.png" alt="Enlight"/></a><a href="brand/evga" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/evga.png" alt="Evga"/></a><a href="brand/gamemax" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/gamemax.png" alt="Gamemax"/></a><a href="brand/gigabyte" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/gigabyte.png" alt="Gigabyte"/></a><a href="brand/gskill" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/gskill.png" alt="Gskill"/></a><a href="brand/galax" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/hof[galax].png" alt="Galax"/></a><a href="brand/kingston" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/kingston.png" alt="Kingston"/></a></div>
-                        <div class="row-contents"><a href="brand/lg" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/lg.png" alt="Lg"/></a><a href="brand/logitech" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/logitech.png" alt="Logitech"/></a><a href="brand/maxsun" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/maxsun.png" alt="Maxsun"/></a><a href="brand/msi" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/msi.png" alt="Msi"/></a><a href="brand/galax" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/nvidia[galax].png" alt="Galax"/></a><a href="brand/raijintek" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/raijintek.png" alt="Raijintek"/></a><a href="brand/razer" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/razer.png" alt="Razer"/></a><a href="brand/asus" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/rog[asus].png" alt="Asus"/></a><a href="brand/samsung" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/samsung.png" alt="Samsung"/></a><a href="brand/sandisk" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/sandisk.png" alt="Sandisk"/></a><a href="brand/segotep" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/segotep.png" alt="Segotep"/></a><a href="brand/team" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/team.png" alt="Team"/></a><a href="brand/wdc" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/wdc.png" alt="Wdc"/></a><a href="brand/zotac" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="web-assets/frontend/brand/zotac.png" alt="Zotac"/></a></div>
+                        <div class="row-contents"><a href="brand/amd" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/001-AMD.png" alt="AMD"/></a><a href="brand/intel" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/002-intel.png" alt="Intel"/></a><a href="brand/cubegaming" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/003-cubegaming.png" alt="Cubegaming"/></a><a href="brand/prime%20gaming" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/004-prime gaming.png" alt="Prime gaming"/></a><a href="brand/galax" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/005-galax.png" alt="Galax"/></a><a href="brand/klevv" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/006-klevv.png" alt="Klevv"/></a><a href="brand/adata" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/007-adata.png" alt="Adata"/></a><a href="brand/lian-li" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/008-lian li[lian-li].png" alt="Lian-li"/></a><a href="brand/geil" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/009-geil.png" alt="Geil"/></a><a href="brand/be%20quiet%21" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/010-be quiet!.png" alt="Be quiet!"/></a><a href="brand/xfx" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/011-xfx.png" alt="Xfx"/></a><a href="brand/seasonic" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/012-seasonic.png" alt="Seasonic"/></a><a href="brand/antec" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/013-antec.png" alt="Antec"/></a><a href="brand/1stplayer" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/014-1stplayer.png" alt="1stplayer"/></a><a href="brand/avexir" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/015-avexir.png" alt="Avexir"/></a></div>
+                        <div class="row-contents"><a href="brand/super%20flower" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/016-super flower.png" alt="Super flower"/></a><a href="brand/asrock" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/asrock.png" alt="Asrock"/></a><a href="brand/asus" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/asus.png" alt="Asus"/></a><a href="brand/biostar" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/biostar.png" alt="Biostar"/></a><a href="brand/corsair" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/corsair.png" alt="Corsair"/></a><a href="brand/cougar" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/cougar.png" alt="Cougar"/></a><a href="brand/cryorig" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/cryorig.png" alt="Cryorig"/></a><a href="brand/ecs" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/ecs.png" alt="Ecs"/></a><a href="brand/enlight" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/enlight.png" alt="Enlight"/></a><a href="brand/evga" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/evga.png" alt="Evga"/></a><a href="brand/gamemax" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/gamemax.png" alt="Gamemax"/></a><a href="brand/gigabyte" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/gigabyte.png" alt="Gigabyte"/></a><a href="brand/gskill" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/gskill.png" alt="Gskill"/></a><a href="brand/galax" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/hof[galax].png" alt="Galax"/></a><a href="brand/kingston" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/kingston.png" alt="Kingston"/></a></div>
+                        <div class="row-contents"><a href="brand/lg" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/lg.png" alt="Lg"/></a><a href="brand/logitech" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/logitech.png" alt="Logitech"/></a><a href="brand/maxsun" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/maxsun.png" alt="Maxsun"/></a><a href="brand/msi" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/msi.png" alt="Msi"/></a><a href="brand/galax" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/nvidia[galax].png" alt="Galax"/></a><a href="brand/raijintek" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/raijintek.png" alt="Raijintek"/></a><a href="brand/razer" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/razer.png" alt="Razer"/></a><a href="brand/asus" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/rog[asus].png" alt="Asus"/></a><a href="brand/samsung" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/samsung.png" alt="Samsung"/></a><a href="brand/sandisk" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/sandisk.png" alt="Sandisk"/></a><a href="brand/segotep" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/segotep.png" alt="Segotep"/></a><a href="brand/team" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/team.png" alt="Team"/></a><a href="brand/wdc" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/wdc.png" alt="Wdc"/></a><a href="brand/zotac" class="ps-link--brands"><img src="<?=base_url()?>frontend/assets/img/svg/productimage.svg" class="lazy" data-src="<?=base_url()?>frontend/brand/zotac.png" alt="Zotac"/></a></div>
                      </div>
                   </div>
                </section>
@@ -1337,113 +1397,45 @@
                </div>
                <section class="ps-marketplace--section ulasan-section shadow" aria-labelledby="ulasanSection">
                   <div class="ps-section__header">
-                     <h3 class="ps-badge--title" id="ulasanSection">Ulasan ID</h3>
+                     <h3 class="ps-badge--title" id="ulasanSection">Ulasan IT</h3>
                   </div>
                   <div class="ps-section__content pt-3">
                      <div class="row uvids-ulasan">
+
+                       <?php foreach ($artikel_all as $key => $value) { 
+
+                    
+
+                    if(strlen($value->images) > 10){
+                        $obj = json_decode($value->images);
+                        $images = $obj['0']->{'file_thumbnail'};
+                    }else{
+                        $images = base_url().'frontend/assets/img/svg/productimage.svg';                   
+                    }
+                    
+                ?>
+
+
                         <div class="col-lg-3 col-md-6 col-sm-6">
                            <div class="ps-post">
-                              <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="https://ulasan.id/2021/10/razer-masuk-ke-ranah-komponen-pc-khusus-untuk-gamer-enthusiasts/" rel="noreferrer" aria-label="ulasan-img-link"></a><img class="blog-lazy" src="<?=base_url()?>frontend/assets/img/webp/web-blog.webp" data-src="https://drive.google.com/uc?id=1hkvHv6RG8YCLsTwf-4XzyTfZENkudz_a" alt="News Image"></div>
+                              <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="#" rel="noreferrer" aria-label="ulasan-img-link"></a><img class="blog-lazy" src="<?=$images?>" data-src="<?=$images?>" alt="News Image"></div>
                               <div class="ps-post__content">
-                                 <a class="ps-post__title text-justify" href="https://ulasan.id/2021/10/razer-masuk-ke-ranah-komponen-pc-khusus-untuk-gamer-enthusiasts/" aria-label="ulasan-link">RAZER Masuk ke Ranah Komponen PC? Khusus untuk Gamer Enthusiasts</a>
-                                 <p class="ps-post__description">Razer, brand mewah terkemuka di dunia untuk para gamer, hari ini meluncurkan Razer Kunai, Razer Hanbo, Razer Katana, dan Razer PWM Fan Controller, sebuah portof...</p>
-                                 <p>by <span class="text-muted text-end"> Ricky</span></p>
+                                 <a class="ps-post__title text-justify" href="#" aria-label="ulasan-link"><?=$value->judul?></a>
+                                 <p class="ps-post__description"><?=$value->deskripsi_format?>...</p>
                               </div>
                            </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                           <div class="ps-post">
-                              <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="https://ulasan.id/2021/04/cube-gaming-axel-casing-mini-pc-berkapasitas-besar/" rel="noreferrer" aria-label="ulasan-img-link"></a><img class="blog-lazy" src="<?=base_url()?>frontend/assets/img/webp/web-blog.webp" data-src="https://drive.google.com/uc?id=1TPjzhqvtMsuoq50aoG4KV72e7VURAA0Q" alt="News Image"></div>
-                              <div class="ps-post__content">
-                                 <a class="ps-post__title text-justify" href="https://ulasan.id/2021/04/cube-gaming-axel-casing-mini-pc-berkapasitas-besar/" aria-label="ulasan-link">Cube Gaming Axel Casing Mini PC Berkapasitas Besar</a>
-                                 <p class="ps-post__description">Mini PC merupakan suatu solusi untuk para pengguna PC yang memiliki ruangan yang tidak terlalu besar. Cube Gaming memiliki solusi untuk para pengguna PC yang in...</p>
-                                 <p>by <span class="text-muted text-end"> Prajogo</span></p>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                           <div class="ps-post">
-                              <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="https://ulasan.id/2021/03/ram-ddr5-untuk-intel-gen-12-dan-amd-zen-4-mulai-produksi/" rel="noreferrer" aria-label="ulasan-img-link"></a><img class="blog-lazy" src="<?=base_url()?>frontend/assets/img/webp/web-blog.webp" data-src="https://drive.google.com/uc?id=1lMW99x1XtEmIQBvPZAiK3WYkSOZsPl5q" alt="News Image"></div>
-                              <div class="ps-post__content">
-                                 <a class="ps-post__title text-justify" href="https://ulasan.id/2021/03/ram-ddr5-untuk-intel-gen-12-dan-amd-zen-4-mulai-produksi/" aria-label="ulasan-link">RAM DDR5 untuk Intel Gen 12 dan AMD Zen 4 Mulai Produksi</a>
-                                 <p class="ps-post__description">Intel dan AMD berencana untuk menggunakan RAM DDR5 untuk prosesor generasi terbarunya. RAM DDR5 ini akan mulai digunakan pada Intel Gen 12 Alder Lake dan AMD Ze...</p>
-                                 <p>by <span class="text-muted text-end"> Prajogo</span></p>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                           <div class="ps-post">
-                              <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="https://ulasan.id/2021/03/kingston-rilis-ssd-nvme-seri-nv1/" rel="noreferrer" aria-label="ulasan-img-link"></a><img class="blog-lazy" src="<?=base_url()?>frontend/assets/img/webp/web-blog.webp" data-src="https://drive.google.com/uc?id=1X22o4D2Hrm4rpaVBBVUxeu7f4vY3JrVa" alt="News Image"></div>
-                              <div class="ps-post__content">
-                                 <a class="ps-post__title text-justify" href="https://ulasan.id/2021/03/kingston-rilis-ssd-nvme-seri-nv1/" aria-label="ulasan-link">Kingston Rilis SSD NVMe Seri NV1</a>
-                                 <p class="ps-post__description">Kingston mengumumkan perilisan SSD NVMe entry level seri NV1 dengan performa yang efisien. NV1 menggunakan desain M.2 satu sisi dengan ukuran 80mm, sehingga dap...</p>
-                                 <p>by <span class="text-muted text-end"> Prajogo</span></p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="row unews-ulasan">
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                           <div class="ps-post">
-                              <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="https://www.youtube.com/watch?v=NTzEC65473U" rel="noreferrer" aria-label="ulasan-img-link"><i class="fab fa-youtube text-red-500 fa-4x me-2"></i></a><img class="blog-lazy" src="<?=base_url()?>frontend/assets/img/webp/web-blog.webp" data-src="https://i.ytimg.com/vi/NTzEC65473U/mqdefault.jpg" alt="Video Image"></div>
-                              <div class="ps-post__content">
-                                 <a class="ps-post__title text-justify" href="https://www.youtube.com/watch?v=NTzEC65473U" aria-label="ulasan-link">MURAH TAPI BAGUS? EMANG ADA? || PRIME POLAR V 2</a>
-                                 <p class="ps-post__description">gimana menurut kalian? MANTEP? Untuk pemesanan harap hubungi sales@enterkomputer.com , atau bisa kunjungi ...</p>
-                                 <p>by <span class="text-muted text-end"> Admin</span></p>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                           <div class="ps-post">
-                              <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="https://www.youtube.com/watch?v=Qzcoj4npnkg" rel="noreferrer" aria-label="ulasan-img-link"><i class="fab fa-youtube text-red-500 fa-4x me-2"></i></a><img class="blog-lazy" src="<?=base_url()?>frontend/assets/img/webp/web-blog.webp" data-src="https://i.ytimg.com/vi/Qzcoj4npnkg/mqdefault.jpg" alt="Video Image"></div>
-                              <div class="ps-post__content">
-                                 <a class="ps-post__title text-justify" href="https://www.youtube.com/watch?v=Qzcoj4npnkg" aria-label="ulasan-link">CASING CUBE GAMING PADA HIGH QUALITY || CUBE GAMING STALLA</a>
-                                 <p class="ps-post__description">gimana menurut kalian? Untuk pemesanan harap hubungi sales@enterkomputer.com , atau bisa kunjungi ...</p>
-                                 <p>by <span class="text-muted text-end"> Admin</span></p>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                           <div class="ps-post">
-                              <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="https://www.youtube.com/watch?v=NdicQ7XMhQ0" rel="noreferrer" aria-label="ulasan-img-link"><i class="fab fa-youtube text-red-500 fa-4x me-2"></i></a><img class="blog-lazy" src="<?=base_url()?>frontend/assets/img/webp/web-blog.webp" data-src="https://i.ytimg.com/vi/NdicQ7XMhQ0/mqdefault.jpg" alt="Video Image"></div>
-                              <div class="ps-post__content">
-                                 <a class="ps-post__title text-justify" href="https://www.youtube.com/watch?v=NdicQ7XMhQ0" aria-label="ulasan-link">CASING PRIME X-[K] || CASING YANG MIRIP LIAN LI 011 DYNAMIC SNOW</a>
-                                 <p class="ps-post__description">gimana menurut kalian? TAKIS LAH! Untuk pemesanan harap hubungi sales@enterkomputer.com , atau bisa kunjungi ...</p>
-                                 <p>by <span class="text-muted text-end"> Admin</span></p>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                           <div class="ps-post">
-                              <div class="ps-post__thumbnail"><a class="ps-post__overlay" href="https://www.youtube.com/watch?v=LuGh2P5rxx4" rel="noreferrer" aria-label="ulasan-img-link"><i class="fab fa-youtube text-red-500 fa-4x me-2"></i></a><img class="blog-lazy" src="<?=base_url()?>frontend/assets/img/webp/web-blog.webp" data-src="https://i.ytimg.com/vi/LuGh2P5rxx4/mqdefault.jpg" alt="Video Image"></div>
-                              <div class="ps-post__content">
-                                 <a class="ps-post__title text-justify" href="https://www.youtube.com/watch?v=LuGh2P5rxx4" aria-label="ulasan-link">UDAH SAATNYA RAKIT PC? HARGA VGA TURUN TERUS!</a>
-                                 <p class="ps-post__description">gimana menurut kalian? apakah harga vga akan kembali normal tahun ini? silahkan komentar dibawah :D Untuk pemesanan ...</p>
-                                 <p>by <span class="text-muted text-end"> Admin</span></p>
-                              </div>
-                           </div>
-                        </div>
+
+                      <?php } ?>
+                       
                      </div>
                   </div>
                </section>
-               <section class="ps-marketplace--section ps-marketplace-recommendation product-no_rounded badge-0 my-5 p-0" aria-labelledby="recommendationSection">
-                  <div class="ps-section__header ps-line-recommendation">
-                     <h3 class="" id="recommendationSection"><span>Rekomendasi untuk Kamu</span></h3>
-                  </div>
-                  <div class="ps-section__content min-h-30">
-                     <div class="row g-0 recommendation-product-list"></div>
-                  </div>
-               </section>
+
             </div>
             <input type="hidden" name="product-tags" data-tags="Gaming Desk,Gaming Peripherals,Gaming Chair">
          </main>
-         <div class="ps-container">
-            <section class="ps-marketplace--section ps-marketplace-description p-5 mt-0">
-               <h4 class="mb-3">Enterkomputer</h4>
-               <p class="mb-2">EnterKomputer menghadirkan produk-produk Elektronik Komputer berkualitas dari brand-brand ternama seperti Notebook, Desktop PC, Komponen PC Rakitan, Sparepart, Printer, UPS, Gadget, Smartphone dan ratusan jenis produk aksesoris elektronik komputer. Dengan mengedepankan kualitas produk, kualitas layanan penjualan serta after-sales service.</p>
-               <p>Enter Komputer senantiasa berusaha untuk terus maksimal melayani kebutuhan anda dalam mendapatkan produk elektronik komputer yang anda butuhkan. Didukung oleh staff-staff profesional yang telah berpengalaman dalam memberikan rekomendasi produk serta spesifikasi yang sesuai dengan kebutuhan dan budget anda.</p>
-            </section>
-         </div>
+
          <div class="ev-popup d-none" data-start="00000000000000" data-end="00000000000000" data-now="20221226124257" data-link="" data-image=""></div>
          <input type="hidden" name="enter_csrf_token" value="fdccea6ade7e4a72af21d7cffb0b37b1"/>
          <div class="panel-sidebar">
@@ -2327,7 +2319,7 @@
          <div class="ps-site-overlay d-none-load"></div>
       </div>
       <div class="template-and-async-js">
-         <script src = "unreg_sw.js"
+         <script src ="<?=base_url()?>frontend/unreg_sw.js"
 async > </script><input type="hidden" name="widget-viewed" data-onesignal="1" data-chatus="1"><script src="<?=base_url()?>frontend/assets/vendors/lottie/lottie-player.js " async></script>
 
 <
@@ -2343,13 +2335,66 @@ async > </script><input type="hidden" name="widget-viewed" data-onesignal="1" da
       <script src="<?=base_url()?>frontend/assets/vendors/jquery-confirm/dist/jquery-confirm.min.js" ></script>
       <script src="<?=base_url()?>frontend/assets/vendors/notifyjs/notify.min.js" ></script>
       <script src="<?=base_url()?>frontend/assets/js/enterinit.min.js?v1.2.7" ></script>
-      <script src="sw.js" ></script>
+      <script src="<?=base_url()?>frontend/sw.js" ></script>
 
-      <script >let assembled_pc;	let tags = $('[name="product-tags"]').data('tags');	$(document).ready(function() {	update_categories();	tags_product(tags);	total_categories();	try{	let ev_popup = $('.ev-popup'),	ev_img = ev_popup.data('image'),	ev_start = parseInt(ev_popup.data('start') != "" ? ev_popup.data('start') : 0),	ev_end = parseInt(ev_popup.data('end') != '' ? ev_popup.data('end') : 0),	ev_now = parseInt(ev_popup.data('now'));	let isshow = (ev_now > ev_start && ev_now < ev_end) ? true : (ev_start == 0 && ev_end == 0) ? true : false;	if (isshow){	if (ev_img != ""){	setTimeout(function() {	home_popup(ev_img, ev_popup.data('link'));	}, 1000);	}	}	} catch(err) {};	onDiscount_product();	newArrival_product();	recommended_product();	});	document.addEventListener( 'DOMContentLoaded', function () {	let home_swiper = new Swiper('.home-swiper', {	loop: true,	grabCursor: true,	lazy: {loadOnTransitionStart: false, loadPrevNext: true},	slidesPerView: 1,	simulateTouch: true,	centeredSlides: true,	spaceBetween: 0,	navigation: {	nextEl: ".swiper-button-next",	prevEl: ".swiper-button-prev",	},	pagination: {	el: ".swiper-pagination",	clickable: true,	dynamicBullets: true,	},	autoplay: {delay: 15000,disableOnInteraction:false},	});	});</script>
+      <script type="text/javascript">
+
+         let assembled_pc;
+let tags = $('[name="product-tags"]').data('tags');
+$(document).ready(function() {
+    update_categories();
+    tags_product(tags);
+    total_categories();
+    try {
+        let ev_popup = $('.ev-popup'),
+            ev_img = ev_popup.data('image'),
+            ev_start = parseInt(ev_popup.data('start') != "" ? ev_popup.data('start') : 0),
+            ev_end = parseInt(ev_popup.data('end') != '' ? ev_popup.data('end') : 0),
+            ev_now = parseInt(ev_popup.data('now'));
+        let isshow = (ev_now > ev_start && ev_now < ev_end) ? true : (ev_start == 0 && ev_end == 0) ? true : false;
+        if (isshow) {
+            if (ev_img != "") {
+                setTimeout(function() {
+                    home_popup(ev_img, ev_popup.data('link'));
+                }, 1000);
+            }
+        }
+    } catch (err) {};
+    onDiscount_product();
+    newArrival_product();
+    recommended_product();
+});
+document.addEventListener('DOMContentLoaded', function() {
+    let home_swiper = new Swiper('.home-swiper', {
+        loop: true,
+        grabCursor: true,
+        lazy: {
+            loadOnTransitionStart: false,
+            loadPrevNext: true
+        },
+        slidesPerView: 1,
+        simulateTouch: true,
+        centeredSlides: true,
+        spaceBetween: 0,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+        autoplay: {
+            delay: 15000,
+            disableOnInteraction: false
+        },
+    });
+});
+
+   </script>
       
-      <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145258648-1"></script>
-      <script>$('[class*="d-none-load"]').removeClass('d-none-load');	$(document).ready(function() {	simulation_icons();	setInterval(simulation_icons, 8000);	});	if (init_web != 0){	let onesignal_viewed = $('[name="widget-viewed"]').data('onesignal');	let chatus_viewed = $('[name="widget-viewed"]').data('chatus');	try{	window.dataLayer = window.dataLayer || [];	function gtag(){dataLayer.push(arguments);}	gtag('js', new Date());	gtag('config', 'UA-145258648-1');	if (onesignal_viewed == 1 && init_web == 1){	window.OneSignal = window.OneSignal || [];	OneSignal.push(function() {	OneSignal.init({	appId: "044cd375-a245-4298-befe-4edc14a21e5e",	});	});	}	if (chatus_viewed == 0 && glob_shopmsg == ""){	document.addEventListener('DOMContentLoaded', function() {	let s,t; s = document.createElement('script'); s.type = 'text/javascript';	s.src = `https://s3-ap-southeast-1.amazonaws.com/qiscus-sdk/public/qismo/qismo-v4.js`; s.async = true;	s.onload = s.onreadystatechange = function() { new Qismo('tomep-s0gj2b3ekbqqti9', {	options: {	channel_id: 3860,	extra_fields: [],	}	});};	t = document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s, t);	});	}	} catch(err) {};	}</script>
+
 
    </body>
 </html>

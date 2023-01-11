@@ -217,11 +217,11 @@ body {
   z-index: 3;
   padding: 0px 20px;
   position: fixed;
-  background: -webkit-linear-gradient(left, #678983, #678983);
-  background: -moz-linear-gradient(left, #678983, #678983);
-  background: -ms-linear-gradient(left, #678983, #678983);
-  background: -o-linear-gradient(left, #678983, #678983);
-  background: linear-gradient(left, #678983, #678983);
+  background: -webkit-linear-gradient(left, #4c6ef8, #6c88f9);
+  background: -moz-linear-gradient(left, #4c6ef8, #6c88f9);
+  background: -ms-linear-gradient(left, #4c6ef8, #6c88f9);
+  background: -o-linear-gradient(left, #4c6ef8, #6c88f9);
+  background: linear-gradient(left, #4c6ef8, #6c88f9);
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   -ms-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
@@ -250,8 +250,7 @@ body {
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        align-items: center;
-        justify-content: center; }
+        align-items: center; }
         .top-nav .top-nav-box .logo-wrapper .logo-box img {
           width: 32px;
           height: 36px;
@@ -439,7 +438,7 @@ body {
                 .top-nav .top-nav-box .top-nav-content .top-nav-box .top-notification .notification-icon .notification-wrapper .notification-header .notification-count {
                   color: #fff;
                   padding: 2px 6px;
-                  background-color: #1aae88;
+                  background-color: #2d1967;
                   -webkit-border-radius: 50%;
                   -moz-border-radius: 50%;
                   -ms-border-radius: 50%;
@@ -532,7 +531,7 @@ body {
             left: 1px;
             position: absolute;
             border: 1px solid #fff;
-            background-color: #1aae88;
+            background-color: #2d1967;
             -webkit-border-radius: 50%;
             -moz-border-radius: 50%;
             -ms-border-radius: 50%;
@@ -784,7 +783,7 @@ body {
     min-height: 1000px;
     display: table-cell;
     vertical-align: top;
-    background-color: #678983;
+    background-color: #fff;
     -webkit-border-radius: 0.3em;
     -moz-border-radius: 0.3em;
     -ms-border-radius: 0.3em;
@@ -823,7 +822,7 @@ body {
         left: 2px;
         position: absolute;
         border: 2px solid #263238;
-        background-color: #1aae88;
+        background-color: #2d1967;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
@@ -954,7 +953,7 @@ body {
           -o-border-radius: 50px;
           border-radius: 50px; }
         .wrapper .side-nav .side-notification .notification-icon:hover {
-          color: #f4f4f4; }
+          color: #8890b5; }
         .wrapper .side-nav .side-notification .notification-icon .notification-wrapper {
           width: 300px;
           z-index: 5;
@@ -981,7 +980,7 @@ body {
             .wrapper .side-nav .side-notification .notification-icon .notification-wrapper .notification-header .notification-count {
               color: #fff;
               padding: 2px 6px;
-              background-color: #1aae88;
+              background-color: #2d1967;
               -webkit-border-radius: 50%;
               -moz-border-radius: 50%;
               -ms-border-radius: 50%;
@@ -1056,7 +1055,7 @@ body {
         border-left: 3px solid transparent; }
         .wrapper .side-nav .main-menu ul li a {
           padding: 17px 22px;
-          color: #f4f4f4;
+          color: #8890b5;
           cursor: pointer;
           display: block;
           text-decoration: none;
@@ -1074,8 +1073,8 @@ body {
       .wrapper .side-nav .main-menu ul a:hover {
         padding-left: 35px; }
       .wrapper .side-nav .main-menu ul li.active {
-        border-color: #E6DDC4;
-        background-color: #181d31; }
+        border-color: #dcdfef;
+        background-color: #cbcfe7; }
         .wrapper .side-nav .main-menu ul li.active > a:hover {
           padding-left: 22px; }
         .wrapper .side-nav .main-menu ul li.active ul {
@@ -1714,7 +1713,7 @@ body {
               background-color: #263238; }
           .wrapper .main .content .media-wrapper .media-row .media-box:hover {
             cursor: pointer;
-            background-color: #f4f4f4; }
+            background-color: #8890b5; }
       .wrapper .main .content .media-wrapper .media-upload-button,
       .wrapper .main .content .media-wrapper .media-search {
         width: 100%; }
@@ -1883,7 +1882,7 @@ body {
                   left: 4px;
                   position: absolute;
                   border: 1px solid #fff;
-                  background-color: #1aae88;
+                  background-color: #2d1967;
                   -webkit-border-radius: 50%;
                   -moz-border-radius: 50%;
                   -ms-border-radius: 50%;
@@ -2330,8 +2329,7 @@ body {
     -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
     -ms-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
     -o-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
-    box-shadow: rgb(35 46 60 / 4%) 0 2px 4px 0;
-    border: 1px solid rgba(101,109,119,.16);
+    box-shadow: #9e9e9e 0 2px 4px 0;
 
 
   }
@@ -2412,7 +2410,7 @@ body {
     .auth-wrapper .auth-user img {
       width: 75px;
       padding: 2px;
-      border: 2px solid #f4f4f4;
+      border: 2px solid #8890b5;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
@@ -2891,7 +2889,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .btn-success,
 .btn-success.dropdown-toggle {
-  background-color: #1aae88; }
+  background-color: #2d1967; }
   .btn-success:hover, .btn-success:focus, .btn-success:active,
   .btn-success.dropdown-toggle:hover,
   .btn-success.dropdown-toggle:focus,
@@ -3025,7 +3023,7 @@ select.form-control:not([size]):not([multiple]) {
 .cke_top,
 .cke_bottom {
   background: transparent !important;
-  border-color: #f4f4f4 !important; }
+  border-color: #8890b5 !important; }
 
 /* DATATABLE */
 .table.dataTable {
@@ -3232,7 +3230,7 @@ table.dataTable thead .sorting_desc_disabled:after {
   border-color: #f7f6f6; }
 
 .fc-unthemed td.fc-today {
-  background-color: #f4f4f4 !important; }
+  background-color: #8890b5 !important; }
 
 /* 7. Contains simple shortcode class such margin, padding etc */
 .mgtop-1 {

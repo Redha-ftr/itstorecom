@@ -15,6 +15,7 @@ class Frontend extends CI_Controller {
         parent::__construct();
         
         $this->load->language('siakad', $this->session->userdata('language'));
+        $this->load->model('frontend_m');
 		
     }
 	
@@ -22,7 +23,8 @@ class Frontend extends CI_Controller {
 	{
 		$this->data['title'] 			= $this->lang->line('frontend');
 		$this->data['subview']			= 'frontend/main';
-
+		$this->data['artikel_all'] 		= $this->frontend_m->artikel();
+		$this->data['slider_promo'] 	= $this->frontend_m->slider_promo();
 		
 		$this->load->view('frontend/main', $this->data);
 

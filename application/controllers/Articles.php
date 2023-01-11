@@ -26,6 +26,7 @@ class Articles extends Base_Controller {
 	{
 		$this->data['title'] = $this->lang->line('menu_articles');
 		$this->data['subview'] = 'articles/main';
+
 		$this->load->view('components/main', $this->data);
 	}
 
@@ -39,10 +40,8 @@ class Articles extends Base_Controller {
 
 	public function form()
 	{
-		$this->load->model('group_m');
 
 		$data['title']			= $this->lang->line('menu_articles');
-		$data['groups'] 		= $this->group_m->all();
 		$data['index'] 			= $this->input->post('index');
 
 		$this->load->view('articles/form', $data);
@@ -117,8 +116,9 @@ class Articles extends Base_Controller {
 
 	public function create()
 	{
-		$data['judul']    	= $this->input->post('judul');
-		$data['deskripsi']    	= $this->input->post('deskripsi');
+		$data['judul']    		= $this->input->post('judul');
+		$data['deskripsi']   	= $this->input->post('deskripsi_simpan');
+		$data['images']    		= $this->input->post('images');
 
 		//log
 		$data['users_created']   		= $this->session->userdata('active_user')->id;
@@ -149,8 +149,9 @@ class Articles extends Base_Controller {
 
 	public function update()
 	{
-		$data['judul']    	= $this->input->post('judul');
-		$data['nis_nss_dns']    	= $this->input->post('nis_nss_dns');
+		$data['judul']    		= $this->input->post('judul');
+		$data['deskripsi']   	= $this->input->post('deskripsi_simpan');
+		$data['images']    		= $this->input->post('images');
 
 		//log
 		$data['updated_at']   		= date('Y-m-d H:i:s');
